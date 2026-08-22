@@ -1,0 +1,41 @@
+{
+  "bias": -1.3602435512462465,
+  "ece": 0.031792277221373316,
+  "feature_names": [
+    "score",
+    "dimension_ok",
+    "equivalence",
+    "symbol_overlap",
+    "candidate_has_formula",
+    "grounding_sensitivity",
+    "constraints_score"
+  ],
+  "kind": "multi",
+  "model": "multivariate_logistic",
+  "n_samples": 902,
+  "report": {
+    "out_of_fold": {
+      "abstain_recall": 0.9490022172949002,
+      "accuracy": 0.7261640798226164,
+      "auc": 0.7715940432937891,
+      "brier_score": 0.17829943094385403,
+      "expected_calibration_error": 0.02523818530692705,
+      "f1": 0.6476462196861625,
+      "folds": 5,
+      "generate_precision": 0.908,
+      "generate_recall": 0.5033259423503326,
+      "threshold_mean": 0.506
+    }
+  },
+  "threshold": 0.49,
+  "version": "0.5",
+  "weights": [
+    -0.02019347250596181,
+    0.011653067454643317,
+    0.2200390565530245,
+    0.004176630261999845,
+    -0.05663933477993675,
+    4.016639402846619,
+    -0.17571336389929962
+  ]
+}

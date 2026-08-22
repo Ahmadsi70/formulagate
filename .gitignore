@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+output/
+_simulated_archive/
+.no-mistakes/
+
+# coverage artifacts
+.coverage
+.coverage.*
+coverage.json
+htmlcov/
+
+# re-fetchable data: arXiv LaTeX sources (~75MB) and per-run caches
+data/real/fulltext/
+data/real/case_results*.jsonl
+data/real/fulltext_per_case.jsonl
+data/.faiss_cache/
+.zcode/

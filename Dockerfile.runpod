@@ -1,0 +1,47 @@
+# ── Formulagate RunPod GPU Instance ─────────────────────────────────────
+# Build:   docker build -f Dockerfile.runpod -t formulagate-runpod .
+# RunPod:  Select this image, expose ports 22060 (SSH) and 8888 (Jupyter)
+#
+# Includes: MiniLM embeddings, FAISS, SymPy, Z3, all benchmark dependencies
+
+FROM runpod/pytorch:3.10-2.0.1-117
+
+LABEL org.opencontainers.image.title="Formulagate RunPod"
+LABEL org.opencontainers.image.description="Physics-aware gate + 8 global benchmarks on GPU"
+LABEL org.opencontainers.image.version="1.0.0"
+
+WORKDIR /workspace/formulagate
+
+# ─── System packages ─────────────────────────────────────────────────────
+RUN apt-get update -qq && apt-get install -y -qq \
+    git curl wget jq \
+    && rm -rf /var/lib/apt/lists/*
+
+# ─── Copy source ──────────────────────────────────────────────────────────
+COPY src/ /workspace/formulagate/src/
+COPY data/ /workspace/formulagate/data/
+COPY scripts/ /workspace/formulagate/scripts/
+COPY tests/ /workspace/formulagate/tests/
+COPY pyproject.toml /workspace/formulagate/
+
+# ─── Install Formulagate + all extras ─────────────────────────────────────
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -e ".[dev,physics,dense,rag,api]" && \
+    pip install --no-cache-dir datasets huggingface_hub requests
+
+# ─── Pre-download MiniLM model (cached in image) ──────────────────────────
+RUN python3 -c "from sentence_transformers import SentenceTransformer; \
+    SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')" 2>&1
+
+# ─── Install Jupyter ──────────────────────────────────────────────────────
+RUN pip install --no-cache-dir jupyterlab notebook
+
+# ─── Entrypoint ───────────────────────────────────────────────────────────
+EXPOSE 8888 22060
+
+COPY scripts/runpod_setup.sh /workspace/formulagate/scripts/runpod_setup.sh
+RUN chmod +x /workspace/formulagate/scripts/runpod_setup.sh
+
+# Start Jupyter lab (benchmarks run via notebook or SSH)
+CMD ["jupyter-lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", \
+     "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]

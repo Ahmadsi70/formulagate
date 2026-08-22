@@ -1,0 +1,19 @@
+{
+  "corpus": "C:\\Users\\badri\\gitu\\data\\real\\arxiv_corpus.json",
+  "method": "deterministic corruption of real arXiv formulas (no generated text)",
+  "real_formulas_parsable": 1301,
+  "real_formulas_decidable": 233,
+  "decidable_with_two_terms": 1,
+  "false_positive_rate": 0.02145922746781116,
+  "corrupted_formulas": 62,
+  "corrupted_in_scope": 1,
+  "detection_rate_in_scope": 1.0,
+  "detection_rate_overall": 0.016129032258064516,
+  "examples_caught": [
+    {
+      "original": "3z^2-r^2",
+      "corrupted": "3z^3-r^2",
+      "how": "exponent 2->3"
+    }
+  ]
+}

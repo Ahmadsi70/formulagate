@@ -1,0 +1,47 @@
+{
+  "pipeline": "real arXiv LaTeX sources -> tex_ingest -> symbol_grounding -> dimensions/SMT",
+  "papers": 142,
+  "equations_extracted": 10551,
+  "equations_parsable": 5228,
+  "decision_coverage_exact": 0.04839326702371844,
+  "decision_coverage_smt": 0.08358837031369548,
+  "decision_coverage_grounded": 0.04858454475899005,
+  "decidable_exact": 253,
+  "decidable_smt": 437,
+  "decidable_grounded": 254,
+  "two_term_equations": 2750,
+  "two_term_share": 0.5260137719969395,
+  "symbol_grounding_coverage": 0.9290359602142311,
+  "false_positive_rate_exact": 0.23228346456692914,
+  "false_positive_rate_smt": 0.04576659038901602,
+  "corrupted_equations": 1074,
+  "corrupted_in_scope": 1074,
+  "detection_scope_exact": 3,
+  "detection_scope_smt": 67,
+  "detection_scope_grounded": 3,
+  "detection_rate_exact": 0.6666666666666666,
+  "detection_rate_smt": 0.0,
+  "detection_rate_grounded": 0.6666666666666666,
+  "detected_exact": 2,
+  "detected_smt": 0,
+  "detected_grounded": 2,
+  "seconds": 587.0,
+  "examples_caught": [
+    {
+      "paper": "2607.21397v1",
+      "original": "v = c \\cdot 1",
+      "corrupted": "v = m \\cdot 1",
+      "how": "symbol c->m",
+      "exact": true,
+      "smt": false
+    },
+    {
+      "paper": "2607.19924v1",
+      "original": "E = \\sqrt{p^2 c^2 + m^2 c^4},",
+      "corrupted": "E = \\sqrt{p^3 c^2 + m^2 c^4},",
+      "how": "exponent 2->3",
+      "exact": true,
+      "smt": false
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "config": {
+    "corpus": "/workspace/formulagate/data/real/arxiv_corpus.json",
+    "embedder": "hash",
+    "folds": 5,
+    "runpod": false,
+    "ssh": null
+  },
+  "benchmarks": {
+    "halueval": {
+      "n_cases": 200,
+      "n_positive": 0,
+      "n_negative": 200,
+      "accuracy": 0.0,
+      "note": "single class — no train/test split possible",
+      "seconds": 18.7,
+      "source": "/workspace/formulagate/data/benchmarks/halueval.json",
+      "meta": {
+        "name": "HaluEval",
+        "url": "https://huggingface.co/datasets/pminervini/HaluEval"
+      }
+    },
+    "mmlu": {
+      "n_cases": 1350,
+      "n_positive": 1350,
+      "n_negative": 0,
+      "accuracy": 1.0,
+      "note": "single class — no train/test split possible",
+      "seconds": 48.6,
+      "source": "/workspace/formulagate/data/benchmarks/mmlu.json",
+      "meta": {
+        "name": "MMLU",
+        "url": "https://huggingface.co/datasets/cais/mmlu"
+      }
+    },
+    "mmlu_pro": {
+      "n_cases": 200,
+      "n_positive": 200,
+      "n_negative": 0,
+      "accuracy": 1.0,
+      "note": "single class — no train/test split possible",
+      "seconds": 7.5,
+      "source": "/workspace/formulagate/data/benchmarks/mmlu_pro.json",
+      "meta": {
+        "name": "MMLU-Pro",
+        "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+      }
+    },
+    "arxiv": {
+      "n_cases": 902,
+      "n_positive": 902,
+      "n_negative": 0,
+      "accuracy": 1.0,
+      "note": "single class — no train/test split possible",
+      "seconds": 30.5,
+      "source": "/workspace/formulagate/data/real/arxiv_cases.json",
+      "meta": {
+        "name": "arXiv",
+        "url": "https://export.arxiv.org/api"
+      }
+    }
+  },
+  "aggregate": {
+    "n_datasets": 4,
+    "total_cases": 2652,
+    "total_seconds": 105.3,
+    "mean_accuracy": 0.75,
+    "mean_ece": null
+  },
+  "report_path": "data/real/bench_suite_server.json"
+}

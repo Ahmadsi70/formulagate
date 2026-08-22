@@ -1,0 +1,27 @@
+{
+  "bias": -0.3751859664181074,
+  "ece": 0.013289088738494059,
+  "feature_names": [
+    "score",
+    "dimension_ok",
+    "equivalence",
+    "symbol_overlap",
+    "candidate_has_formula",
+    "grounding_sensitivity",
+    "constraints_score"
+  ],
+  "kind": "multi",
+  "model": "multivariate_logistic",
+  "n_samples": 902,
+  "threshold": 0.49,
+  "version": "0.5",
+  "weights": [
+    -0.0556549321394487,
+    -0.030684204917718498,
+    0.0849821219851815,
+    -0.1915315018490397,
+    0.21261628022369047,
+    0.5934557928039456,
+    -0.048531113713026534
+  ]
+}

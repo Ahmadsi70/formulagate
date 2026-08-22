@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "mmlupro_0",
+    "question": "Typical advertising regulatory bodies suggest, for example that adverts must not: encourage _________, cause unnecessary ________ or _____, and must not cause _______ offence.",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_1",
+    "question": "Managers are entrusted to run the company in the best interest of ________. Specifically, they have a duty to act for the benefit of the company, as well as a duty of ________ and of _______.",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_2",
+    "question": "There are two main issues associated with _____ sizing. _______ is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. _______ is a second issue, particularly the ________ package that employees receive when laid off.",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_3",
+    "question": "_______ locate morality beyond the sphere of rationality in an emotional 'moral impulse' towards others.",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_4",
+    "question": " Some of key differences between Islamic finance and conventional finance include - prohibition of charging and paying _______, prohibition on ______ and ______ transactions, prohibition of sinful investment and requirement for all financial products to be backed by __________.",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_5",
+    "question": " Which of the following are the three broad groups of organizational characteristics segmentation criteria?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_6",
+    "question": " Pine and Gilmore (1999) derive four distinct realms of experience, based on two dimensions. What are these dimensions?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_7",
+    "question": " Which type of research methods are designed to elicit responses to predetermined, standardized questions from many respondents?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_8",
+    "question": "Where the price is set low relative to the competition to gain market share, this strategy is known as:",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_9",
+    "question": "Once a train pulls out of a station, or an aeroplane takes off or a film starts, those seats are lost and can never be sold. This is referred to as:",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_10",
+    "question": "A marketing research firm contracts with clients to conduct a complete marketing research project from data collection, analysis, and reporting. It is a__________ firm.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_11",
+    "question": "The six dimensions usually considered to constitute the external marketing environment include all of the following except:",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_12",
+    "question": "What is the term for the 'rule of thumb' type of bias in decision making?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_13",
+    "question": "As what is ensuring that one individual does not carry the burden of a whole work task referred to?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_14",
+    "question": "What theory is built around the principle that 'people make choices regarding how to behave based on values and beliefs'?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_15",
+    "question": "How does lateral communication in an organisation occur?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_16",
+    "question": "The stock of the CCC Corporation is currently valued at $12 and is assumed to possess all the properties of geometric Brownian motion. It has an expected annual return of 15%, an annual volatility of 20%, and the annual risk-free is 10%. Using a binomial lattice, determine the price of a call option on CCC stock maturing in 10 monthes time with a strike price of $14 (Let the distance between nodes on your tree be 1 month in length).",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_17",
+    "question": "George is seen to place an even-money $100,000 bet on the Bulls to win the NBA Finals. If George has a logarithmic utility-of-wealth function and if his current wealth is $1,000,000, what must he believe is the minimum probability that the Bulls will win?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_18",
+    "question": "Boy Alcott and Jon Buxton are partners in a steel company. They share the net income in proportion to their average investments. On January 1, Alcott invested $4,000 and Buxton invested $5,000. On May 1, Alcott invested an additional $2,000 and Buxton invested $1,750. On September 1, Alcott withdrew $500. On November 1, each partner invested an additional $2,000. The net profit for the year was $8,736. Find each partner's share of the profit.",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_19",
+    "question": "TheAlforsCompany had a beginning inventory of $30,000, Jan 1, 1974. During the year, purchases amounted to $87,500, net sales to $102,000. Assuming that the gross profit rate is 40% of the net sales, what is the ending inventory using the gross profit method of inventory evaluation?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_20",
+    "question": "(a) Given the two discount series of 30-10-2(1/2) % and 25-15-2%, which is better? (b) Given the discount series 15-15% and the single rate of 30%, which is better?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_21",
+    "question": "On July 7, Magee Data stock sold at a high of 23(1/8) and a low of 22(5/8). Giant Industrials sold for a high of 24(1/4) and a low of 23(1/2). Mr. Taylor purchased 300 shares of Magee Data at the high of the day and 400 shares of Giant Industrials at the low of the day. What was the cost of his purchase?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_22",
+    "question": "During a riot, Mr. Winter's car was overturned causing $346.50 in damage.Mr. Winter had $50-deductible col-lision insurance, but no comprehensive coverage. How much will theinsurance company pay Mr. Winter?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_23",
+    "question": "Janet Firestone purchased an option on a stock for $175 giving her the right to buy 100 shares at 14(1/2) within 90 days. One month later, she exercised her option and then sold the stock on the same day for 17. What was her profit on the stock?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_24",
+    "question": "Margaret Denault recently rented a truck to drive 516 miles in days and 17 hours, using 54 gallons of gasoline. The rental company charged her $32 per day, $.22 per mile, and $.445 per gal-lon of gas. Extra hours were charged $2.75 per hour. Find the total cost of the rental.",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_25",
+    "question": "Where in the balance sheet does each of the following belong? (A) Taxes payable (B) Capital stock (C) Retailed earnings (D) Administrative expense (E) Prepaid expenses",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_26",
+    "question": "Prepare a balance sheet for Silvertown Office Supplies, C.H. Walters, owner, as of April 30 of the current year, based on the following information: Cash, $3,390; Notes Receivable, $2,905; Accounts Receivable, $8,215; Merchandise Inventory, $23,600; Store Supplies, $720; Store Fixtures, $2,895; Furniture and Equipment, $5,600; Notes Payable, $5,250; Accounts Payable, $4,800.",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_27",
+    "question": "What is the net cost of a tape recorder whose list price is $32 and on which the discount rate is 30%?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_28",
+    "question": "Mr. Frankel wants to borrow $2,000 from November 16 for 143 days. The interest rate is 6%. What would the difference in the interest charge amount to if the bank used exact interest instead of bankers' interest?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_29",
+    "question": "HarryHyppeis paid a straight wage of $2.89 (1/2) per hour. If he works 9 hours a day in a six-day week, how much will he be paid?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_30",
+    "question": "Steven Moore purchased a new car for $3,462.20, including taxes and all other charges. He wishes to pay for it in 35 months. Find his monthly payments.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_31",
+    "question": "A man sells novelty items for $1.25 each. His cost is $.75 apiece plus a fixed cost of $140,000. How many items must he sell to break even? What is his sales revenue at that point?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_32",
+    "question": "Find the amount to be paid each month in order to pay off car described below in two years. Price of car: $5,779.00 Transportation charge: $73.00 Factory-installed equipment: Radio 95.50 Metallic paint 59.90 Racing stripes 39.50 Power steering 98.00 Wide radial tires 198.10 Air conditioning 429.00 Dealer-installed equipment: Mirror $8.50 Mats 10.75 Undercoat 35.00 Insurance : Collision ($100-deductible) $505.75 for two years Comprehensive 231.50 for two years Sales tax: 5% Cash deposit: $500.00 Cost of financing: 9(1/2)%per year for two Years Used car allowance: $370.00",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_33",
+    "question": "Find the break-even point for the cost of production C and the revenue R received for each of the following: (a) C = $10x + $600,R = $30x (b) C = $5x + $200,R = $8x (c) C = $0.2x + $50,R = $0.3x (d) C = $1800x + $3000,R = $2500x",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_34",
+    "question": "The tax rate in the town of Centerville is 11(1 / 2)%. If a tax of $1,794 was paid on a piece of property and the assessment rate in Centerville is 30%, what is the expected market value of the property?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_35",
+    "question": "A man buys a house and lot for $35,000, paying $12,000 down and borrowing the balance on a 6% mortgage due in 10 years. He pays real-estate taxes of $240, a water tax of $30, and insurance premiums of $70 a year. Allowing 4% interest on his investment, and 2% depreciation on the house valued at $25,000, what is the cost per month of owning the home if repairs average $120 a year?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_36",
+    "question": "The Five Star Hotel put down $3,000 worth of carpeting. The carpeting is made to last for five years. The hotel's accountant wishes to use the declining-balance method. What is the depreciation for the second year?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_37",
+    "question": "Mr. Williams owns a piece of property assessed at $7,800 in a city which has a tax rate of $2.80 per $100. How much in property taxes does he pay?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_38",
+    "question": "Joe Troy purchased a chain saw for $1,200 for his lumber mill. The saw will last 6 years and have no residual value. Mr. Troy wishes to use the straight-line method of depreciation. Find the depreciation and book value for the first two years.",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_39",
+    "question": "Mr. Castle will buy one of two 10-HP motors offered to him. Motor A sells for $169 and has a full-load efficiency of 85.2%. Motor B costs $149 and has a full-load efficiency of 82.1%. The annual inspection and maintenance fee on both motors is 14.5% of the price. If electric energy costs 2.35 cents per kilowatt hour (1 HP = 0.746kw.) find the number of hours per year at which the cost of both motors will be the same.",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_40",
+    "question": "Determine the number of men needed to build a boat in 77 days if it takes 36 men 132 days to build one.",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_41",
+    "question": "Given the above statement, find what would happen to the free amount if the reserve for contingencies to were to increase by $10,000.Retained Earnings: Reserved for contingencies $25,000 Reserved for plant expansion $20,000 Total reserves $45,000 Free retained earnings $50,000 Total retained earnings $95,000",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_42",
+    "question": "How much will it cost to cover a floor 13'6\" × 18'8\" with asphalt tile if the price is 9 (3/4) \\textcent per 9\" tile?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_43",
+    "question": "Dermanand Klein are the sole stockholders of the Leather Products Corporation. It is estimated that Leather Products will have a taxable income of $30,000 this year. The stock is evenly divided between Mr.Dermanand Mr. Klein, so that resulting dividends will also be equally shared. Both Mr. Dermanand Mr. Klein expect to receive from other sources a net taxable income of $12,000. All profit after taxes Leather Products makes this year will be paid out as dividends. Mr.Dermanwants to introduce a new product. Should this venture succeed, the annual income before taxes will increase by $10,000. What will be the increase in stockholders' income after taxes? Use the tables \"Federal Taxes Rates on 1949 Net Incomes of Corporations in the United States\", and \"Federal Tax Rates on 1949 Incomes of Individuals in the United States.\"",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_44",
+    "question": "Tom bought a new bicycle for $80. After 4 years of use, he sold it to a second-hand dealer for $15. What was the annual depreciation by the straight line method? What was the annual rate of depreciation?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_45",
+    "question": "A manufacturer can produce a saw for $13 in direct costs and $10 in overhead or indirect costs. He needs to sell his saw for a minimum price. At what price must he sell his saw so that he will not incur a short term loss?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_46",
+    "question": "Which of the following would yield the greatest net return to acorporation in the 50% tax bracket A) 5% certificate of deposit B) 5% government bond C) 5% corporate bond D) 5%treasurybond E) 4% municipal bond",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_47",
+    "question": "The list price of a book is $4.95. It sells in a bookstore at a net price of $2.95. What is the amount of trade discount?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_48",
+    "question": "A business started last year with an inventory of 90,000 items which cost $60,000 and had a selling price of $80,000, At the end of the year, the inventory consisted of 70,000 items which cost $90,000 and had a selling price of $120,000. Records indicate that, during the year, 360,000 items were sold which cost $300,000, with net sales of $380,000. What are thestockturnrates at cost, selling price, and number of units?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_49",
+    "question": "Paul Murphy wants to have $10,000 in his account after 10 years. If interest is compounded annually at 4%, how much should Mr. Murphy invest now?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_50",
+    "question": "Mr. Torres owns 350 shares of Krescostock paying a quarterly dividend of $1.20 per share, with an extra year-end dividend of $.30 per share. What was his total income from the stock for the year?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_51",
+    "question": "Assume the following model (from the preceding problem). Y = C + I + G C = 100 + 0.6Y I = 0.2Y - 50i M_D = 0.25Y - 30i M_s = 65 G = 100 whose equilibrium level was found to be 500. Suppose that full employment level of income is 600, so that the desired change is 100. If the money supply is held constant, what change in govern-ment spending will be required to close the deflationary gap?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_52",
+    "question": "The average salary of the Bedford Manufacturing Co. rose 60% during a 10-year period. This rise amounted to $42.50 a week. (a) Find the average weekly salary at the beginning of the 10-year period, and (b) at the end of the 10-year period.",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_53",
+    "question": "_______ such as bitcoin are becoming increasingly mainstream and have a whole host of associated ethical implications, for example, they are______ and more ______. However, they have also been used to engage in _______.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_54",
+    "question": "_______ economy is the term used to describe individuals being hired for a specific task rather than on a long-term basis. While this results in _________ which is beneficial for businesses, issues for those employed in such a manner relate to increased ________, uncertainty and a lack of _______.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_55",
+    "question": " The ________ perspective on sustainability resulted from growth models that analysed the carrying capacity of the planet, overall concluding that the finite capacity of the earth and_______, ________ and _______ by current and past generations could reduce quality of life for future generations. This contrasts with the environmental perspective with focuses on the need to maintain and preserve the natural environment.",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_56",
+    "question": "In a business to business context, conflicts of interest can arise in two main ways: conflict of _______ and _______ interests, which might arise, for example, when a firm is hired as a supplier of professional services by another firm or conflict of _________ and ________ interests, such as where an individual's interests may conflict with that of their employer.",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_57",
+    "question": "This is a hierarchy of effects or sequential model used to explain how advertising works:",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_58",
+    "question": "The extent to which a service envelops a product varies according to a number of factors. Which of the following is NOT one of the factors?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_59",
+    "question": "An important characteristic of services is that they are produced and consumed by people, simultaneously, as a single event. One of the outcomes of this unique process is that it is exceedingly difficult to standardize the delivery of services around the blueprint model. Which characteristic of service is this referred to?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_60",
+    "question": "This is the sharing of meaning created through the transmission of information:",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_61",
+    "question": "Which one is not an element in the primary activities of a value chain?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_62",
+    "question": "What are characteristics of a programmed decision?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_63",
+    "question": "Workers' acceptance of change is characteristic of what type of culture?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_64",
+    "question": "For a two-period binomial model for stock prices, you are given: (i) Each period is 6 months. (ii) The current price for a nondividend-paying stock is $70.00. (iii) u =1.181, where u is one plus the rate of capital gain on the stock per period if the price goes up. (iv) d = 0.890 , where d is one plus the rate of capital loss on the stock per period if the price goes down. (v) The continuously compounded risk-free interest rate is 5%. What is the current price of a one-year American put option on the stock with a strike price of $80.00.",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_65",
+    "question": "Let's assume that the 10-year annual return for the S&P 500 (market portfolio) is 10%, while the average annual return on Treasury bills (a good proxy for the risk-free rate) is 5%. Whats the market Treynor Ratio? Return the numeric value between 0 and 1.",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_66",
+    "question": "CheckMate forecasts that its dividend will grow at 20% per year for the next four years before settling down at a constant 8% forever. Dividend (current year,2016) = $12; expected rate of return = 15%. What is the fair value of the stock now?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_67",
+    "question": "If at the beginning of each month a deposit of $500 is made in an account that pays 8% compounded monthly, what will the final amount be after five years?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_68",
+    "question": "Suppose the demand curve for oPads is given by $p=\\frac{500-x}{10}, What is the elasticity value of this demand function.",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_69",
+    "question": "Suppose a monopoly market has a demand function in which quantity demanded depends not only on market price (P) but also on the amount of advertising the firm does (A, measured in dollars). The specific form of this function is Q = (20 - P)(1 + 0.1A - 0.01A^2). The monopolistic firm's cost function is given by C = 10Q + 15 + A. Suppose there is no advertising (A = 0). What output will the profit-maximizing firm choose?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_70",
+    "question": "Mr. Norman Schwartz, age 30, wants to take out a $15,000 insurance policy. What will be his difference in annual premiums between a 20-payment life policy and an ordinary life paid-up-at 65 policy? If he dies at age 62, how much will he have paid in for each policy?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_71",
+    "question": "lf 10% and 20% discounts are both given on the\" Speedway Racing Set\", list-priced at $32, what is the net price?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_72",
+    "question": "What percent of .65% is .42%?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_73",
+    "question": "A wholesaler was going out of business so he sold merchandise for $1,288 at a loss of 8 percent of his original cost. Find the original cost of the merchandise.",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_74",
+    "question": "Pauline DiLorenzo wishes to purchase a store valued at $26,000. She obtains a mortgage for $23,000 at a rate of 5.5% per annum. If her gross income is $3,500 and her expenses are $1,800, what is the return on her investment?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_75",
+    "question": "ABC Corporation shows total assets of $75,000 and total liabilitiesof $52,000. If the Corporation has only 500 shares ofstock outstanding, what is the book value per share?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_76",
+    "question": "Martha Michael spends $360 on her monthly telephone bills. This amounts to 6 (1 / 4) % of her earnings for the year. Find her yearly earnings.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_77",
+    "question": "a frame house, located in a Class A town, insured for $24,000, or the sameframe house, located in a Class B town, insured for thesame $24,000? How much of a difference is there?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_78",
+    "question": "George put $500 into an account that bears interest at the rateof 8%, compounded quarterly. If he leaves the $500 for fiveyears, how much will he have?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_79",
+    "question": "What percent is 131 of 42?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_80",
+    "question": "Ike Waterman and Sean Cole invested $20,000 and $10,000 respectively in a fast food store. Each partner receives 6% of his investment. The remaining profit is to be shared equally. If the profit last year was $10,400, what was each partner's share?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_81",
+    "question": "An invoice dated March 2 in the amount of $416.50, less 15% and 2(1/2) % with terms of 2% 10-EOM, was paid on April 10. What was the amount remitted in payment?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_82",
+    "question": "Paul Reilly deposited a $5,000 check in his savings and loan association account, which yields 4% interest. It remained there 3 years. Paul can have his interest compounded semiannually or quarterly. Which way will be more profitable to him?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_83",
+    "question": "With the invoice amount of $190.55, and a discount rate of 2% on a partial payment of $90.00, what is the balance due and the discount?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_84",
+    "question": "$ .01(1/4) a share for stocks under $5 a share par value $ .02(1/2) a share for stocks from $5-$10 a share par value $ .03(3/4) a share for stocks from $10-$20 a share par value $ .05 a share for stocks over $20 a share par value Mr. Carr sold 300 shares of stock having a par value of $50 per share. What was the New York State transfer tax?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_85",
+    "question": "New City has an annual budget of $4,221,890.49. Its property has a total assessed valuation of $150,781,803.21. What is the city's tax rate if other estimated receipts total $385,000.",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_86",
+    "question": "A furniture manufacturer wants to find out how many end tables he produced during a certain week. He knows that 8 employees produced 16 end tables each, 21 employees produced 23 each, 7 produced 27 each, and 4 produced 29 each, Find the total number of end 'tables produced during that week.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_87",
+    "question": "A television sells for $180. It costs the retailer $136.50. Find the percent markup based on the selling price.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_88",
+    "question": "Find the total earnings of an employee who earns $2.40 per hour with time and a half for more than 8 hours per day if he worked 8 hours on Monday, 7 hours on Tuesday, 9 hours on Wednesday, 9 hours on Thursday, and 10 hours on Friday.",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_89",
+    "question": "The Last National Bank has just approved a loan at an interest rate of 6% for 90 days. If the interest charge on the loan is $36, how much is the principal of the loan?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_90",
+    "question": "What is the future value obtained When $5,000 is saved annually for 20 years at 5% compounded quarterly.",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_91",
+    "question": "On September 1, Mr. Blake received a statement for his checking account. The closing balance on the statement was $1,810.50. Mr. Blake's checkbook shows a balance of $1,685.75. In comparing his check stubs to the statement, he notices that checks for amounts of $60.80, $40.30, and $25.00 did not appear on the statement. Also, the statement lists a service charge of $1.35 which does not appear on his checkbook stubs. Prepare a reconciliation statement for. Mr. Blake.",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_92",
+    "question": "Ringling Brothers Circus recently purchased a new tiger cagefor $1,950. The accountants have decided to depreciatethe cage using the declining balance method with arate of 15%. What will be the book value of the cage in3 years?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_93",
+    "question": "The assessed valuation of the taxable property in the town of Smithville is $52,384,600. The taxes to be raised are $123,475 for a new local project, $931,442.75 for educational purposes, and $319,878 for health and welfare needs. Find the town's tax rate (a) to thousandths of a percent, (b) in mills per $1 of assessed value (c) in cents per $100 of assessed value, and (d) in mills per $1,000 of assessed value.",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_94",
+    "question": "Florsheimand Co. accepted a 90-day sight draft for $425.00 on October 10. It was discounted on November 1 at 5%. If their bank charged a (1/3)% collection fee, what were the proceeds?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_95",
+    "question": "TencerInc. has estimated its revenue function to be r(x) = 3x^2, where x is the number of years the company has been in business and r(x) is the total revenue earned up to year x in millions. The profit function is f(x) = 2x^2 - 5x +1, f(x) is the total profit earned up to year x. What is the cost accrued over a three year period? What is the rate of change of cost of production by the end of the third year?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_96",
+    "question": "A draft for $800, due in 3 months and bearing interest at 4(1/2)%, was discounted 60 days before it was due. If the discount rate was 5%, what were the proceeds?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_97",
+    "question": "A water bed sells for $330 cash or $40 down and $10.50 a month for 36 months. Find the annual interest rate charged.",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_98",
+    "question": "A tomato cannery has 5000 pounds of grade A tomatoes and 10,000 pounds of grade B tomatoes, from which they will, make whole canned tomatoes and tomato paste. Whole tomatoes must be composed of at least 80 percent grade A tomatoes, whereas tomato paste must be made with at least 10 percent grade A tomatoes. Whole tomatoes sell for $0.08 per pound and paste sells for $0.05 per pound. Formulate a linear program to solve for how much of each product to make, if the company wants to maximize revenue. (Hint: Let x_WA = pounds of A grade tomatoes used in whole tomatoes, x_WB = pounds of B grade tomatoes used in whole tomatoes; the amount of whole tomatoes produced can be found as x_WA + x_WB after x_WA and x_WB are chosen.)",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_99",
+    "question": "In one year Juan earned $30,000. and Don earned $20,000 as free-lance commercial artists. Juan paid $10,000. in taxes. Don paid $6,000. They know that lb + a = T is the linear equation used in computing their tax payments, where I stands for 'income' and T, the amount of tax to be paid. What are the values of the constants a and b?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_100",
+    "question": "A loan is made on December 17 for a time period of 120 days. When is it due (not a leap year)?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_101",
+    "question": "A $39.90 radio can be purchased on the installment plan for $5.00 down and $3.10 a month for a year. What is the annual interest rate for this installment purchase?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_102",
+    "question": "An electric sign in Times Square cost $4,500. It has an expected life of 11,250 hours after which it will have a scrap value of $450. What is the depreciation charge for a month in which it was used 478 hours?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_103",
+    "question": "While on a trip to St. Louis, Howard Travers made the following purchases: 10 gal @ 33.9 \\textcent 14 gal @ 32.9 \\textcent 12 gal @ 31. 9 \\textcent 8 gal @ 29.9 \\textcent What was the average cost per gallon, to the nearest tenth of a cent?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_104",
+    "question": "The owner of a small store plans on purchasing $1,500 worth of goods to be marked up 40% based on the selling price. Of this he will have purchased $200 worth of \"floor goods\", which will sell for $250. If he is to maintain the desired 40% markup on the total purchase, what markup % is needed on the balance of the purchases?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_105",
+    "question": "Mr. Carson signed a note as payment for a debt on March 15. If the note had a term of two months, what was its maturity date?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_106",
+    "question": "John Wilson retired at age 62 with average yearly earnings of $5400. His wife was also 62 when he retired. How much do the Wilsons receive each month?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_107",
+    "question": "Mr. Howard owns a house worth $16,500 which is assessed at the rate of 22%. His tax rates are as follows: $.41 per $100 for a local college fund $.02 per $100 for special education $.001 per $100 for health and welfare $.089 per $100 for community construction How much tax does Mr. Howard pay for each of these needs? What was the total tax?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_108",
+    "question": "It has been found that hours of recreation (r) and wages (W) have a direct effect on productivity (P), so that : P =ar+bW. In two surveys it was found that Survey 1P = 170 : r = 51 : W = 136 Survey 2P = 425 : r = 68 : W = 204 What are the values of a and b ?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_109",
+    "question": "A sum of money is borrowed for a term of 1 year, discounted at the rate of 6%. What is the true rate of interest charged? What would the true rate of interest be for the same sum of money discounted at an 8% rate? (Record answers to the nearest tenth of 1%.)",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_110",
+    "question": "Mr. Casey purchased office furniture for $725. It has an estimated salvage value of $25.00 at the end of 10 years. Using the sum-of-the-years-digits method, find the depreciation for the fourth year.",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_111",
+    "question": "Steven Fox is a salesman for the Maxi-Power Vacuum Cleaner Co. He receives $32.50 for each cleaner he sells, plus a 25% commission on all the accessories and supplies he sells. Find his total income for the month during which he sells 14 cleaners and $237.40 worth of accessories and supplies.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_112",
+    "question": "A radio costing $38.00 plus 3% excise tax and 4% sales tax may be purchased for $10.00 down and 3 payments of $11.60. (A) What is the cash price of the radio? (B) What is the installment price of the radio?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_113",
+    "question": "A bulldozer that the Columbus Construction Co. purchased for $15,500, will have a trade-in value of $2,600 after five years. What is the book value at the end of the first three years, if the company uses the sum-of-the- years-digits method?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_114",
+    "question": "Mr. Langham decides to take a loan from his bank for $60 at a nominal rate of 6%. If he agrees to repay the loan in equal installments over a period of 15 months, how much will each of the monthly payments be?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_115",
+    "question": "A television sells for $226.50. The markup is 30% based on the cost. Find the cost.",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_116",
+    "question": "Assume that some function, K = F (i) is the cost of the production and marketing of a product, and the total cost (K) is solelydependantupon the number of items produced, whereistands for the number of items produced. Then, the average rate of change in cost = {change in total cost / change in number of items) ; (\\DeltaK/\\Deltai) = [{F(i_2) - F(i_1)} / {i_2 - i_1}]. Suppose the production and marketing cost of a pair of compasses is K = F (i) = 3\\surdi . When O \\leqi\\leq 250. What then, is the average rate of change in cost, (a) fromi= 25 toi= 100 ? (b) fromi= 25 toi= 225 ?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_117",
+    "question": "The Motor-Cade Auto Supply Company is taking inventory for the quarter ending June 30. It discovers that it has150 cans of Q-56 motor oil on hand. Records reveal the following information: Quantity Cost per Can Inventory, April 1 130 $.36 Purchase, April 15 100 $.365 Purchase, May 23 180 $.40 Purchase, June 29 120 $.425 Find the value of this item in their inventory, using the average cost method.",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_118",
+    "question": "What is the net price of a calculator list-priced at $100.00 and discounted at 40% and 25%?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_119",
+    "question": "What are the three differing types of stakeholder theory according to Donaldson and Preston (1995)?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_120",
+    "question": "_______ theory can be described as a code of conduct to which all rational beings should adhere. This contrasts with ________ morality which is the code of conduct adopted by a particular group or society.",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_121",
+    "question": " Although the benefit and contribution of civil society in encouraging sustainability, lobbying on important issues and helping the needy are taken for granted in many places, in many other countries, such as _____ and ______ civil society is far less developed than in, for instance, _______.",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_122",
+    "question": "Which of the following is not one the underlying principles of the corporate governance Combined Code of Practice?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_123",
+    "question": " There are three main types of buying situations in an organization, referred to by Robinson, Faris, and Wind (1967) as _____________.",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_124",
+    "question": " Which of the following are aimed at providing customers with the peace of mind of knowing that the company they are purchasing from is competitive in price?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_125",
+    "question": " These objectives are often the most suitable when firms operate in a market dominated by a major competitor and where their financial resources are limited.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_126",
+    "question": "The primary objective of team-based selling is to",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_127",
+    "question": " With this pricing approach, the pricing process begins with the customer; not the cost of the product offering:",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_128",
+    "question": "___________ is based on the idea that customer expectations of the service they will receive shape their perception of the actual service encounter.",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_129",
+    "question": "Which one of the following political leaders could not be termed a 'transformational' leader?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_130",
+    "question": "What is a paradigm?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_131",
+    "question": "According to Belbin (1981) an extroverted and enthusiastic person fits with what role?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_132",
+    "question": "What is the term for organisational development through a formally designed organisational structure?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_133",
+    "question": "Carl the clothier owns a large garment factory on an isolated island. Carl's factory is the only source of employment for most of the islanders, and thus Carl acts as a monopsonist. The supply curve for garment workers is given by l = 80w, where l is the number of workers hired and w is their hourly wage. Assume also that Carl's labor demand (marginal revenue product) curve is given by l = 400 - 40MRP_l. How many workers will Carl hire to maximize his profits?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_134",
+    "question": "If the annual earnings per share has mean $8.6 and standard deviation $3.4, what is the chance that an observed EPS less than $5.5?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_135",
+    "question": "Traders in major financial institutions use the Black-Scholes formula in a backward fashion to infer other traders' estimation of $\\sigma$ from option prices. In fact, traders frequently quote sigmas to each other, rather than prices, to arrange trades. Suppose a call option on a stock that pays no dividend for 6 months has a strike price of $35, a premium of $2.15, and time to maturity of 7 weeks. The current short-term T-bill rate is 7%, and the price of the underlying stock is $36.12. What is the implied volatility of the underlying security?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_136",
+    "question": "John's Lawn Mowing Service is a small business that acts as a price-taker (i.e., MR = P). The prevailing market price of lawn mowing is $20 per acre. John's costs are given by total cost = 0.1q^2 + 10q + 50, where q = the number of acres John chooses to cut a day. Calculate John's maximum daily profit.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_137",
+    "question": "You are asked to determine the price of a European put option on a stock. Assuming the Black-Scholes framework holds, you are given: (i) The stock price is $100. (ii) The put option will expire in 6 months. (iii) The strike price is $98. (iv) The continuously compounded risk-free interest rate is r = 0.055. (v) δ = 0.01 (vi) σ = 0.50. What is the price of the put option?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_138",
+    "question": "Calculate the interest rate (between 0 and 1) for an account that started with $5,000 and now has $13,000 and has been compounded annually for the past 12 years. Answer with the numeric value.",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_139",
+    "question": "Universal Fur is located in Clyde, Baffin Island, and sells high-quality fur bow ties throughout the world at a price of $5 each. The production function for fur bow ties (q) is given by q = 240x - 2x^2, where x is the quantity of pelts used each week. Pelts are supplied only by Dan's Trading Post, which obtains them by hiring Eskimo trappers at a rate of $10 per day. Dan's weekly production function for pelts is given by x = \\sqrt{l}, where l represents the number of days of Eskimo time used each week. For a quasi-competitive case in which both Universal Fur and Dan's Trading Post act as price-takers for pelts, what will be the equilibrium price (p_x) for pelt?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_140",
+    "question": "Suppose there is a 50-50 chance that an individual with logarithmic utility from wealth and with a current wealth of $20,000 will suffer a loss of $10,000 from a car accident. Insurance is competitively provided at actuarially fair rates. Compute the utility if the individual buys full insurance.",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_141",
+    "question": "Assume the Black-Scholes framework. For $t \\ge 0$, let $S(t)$ be the time-$t$ price of a nondividend-paying stock. You are given:\n(i) $S(0)=0.5\n(ii) The stock price process is $\\frac{dS(t)}{S(t)} = 0.05dt+0.2dZ(t)$ where $Z(t)$ is a standart Brownian motion.\n(iii) $E[S(1)^\\alpha]=1.4$, where $\\alpha$ is a negative constant.\n(iv) The continuously compounded risk-free interest rate is $3%$.\nConsider a contingent claim that pays $S(1)^\\alpha$ at time 1. What is the time-0 price of the contigent claim?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_142",
+    "question": "A teacher wants to invest $30,000 into an account that compounds annually. The interest rate at this bank is 1.8%. How much money will be in the account after 6 years?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_143",
+    "question": "Mr. Smith purchased a car for $4250. He was allowed $500 for his old car as a down payment. The balance was paid in 25 equal monthly payments of $180. What was the interest rate (nearest 10th of 1%)? Use the constant ratio formula.",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_144",
+    "question": "Amalgamated Corp. offered one of its Vice Presidents an option to purchase 1000 shares of its common stock on June 21 at 95% of its average price for the day. If Amalgamated' s high for the day was 19(3/8) and its low was 18(3/4), at what price per share was the option awarded?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_145",
+    "question": "Parks Wholesalers are offering a chain discount of 25-10-5% on sofas. What is an equivalent single discount for this series?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_146",
+    "question": "Mr. Singer insured his house for $36,000 with a policy containing an 80% coinsurance clause. If the house has a value of $45,000 and he suffers a fire loss of $10,500, how much will the insurance company pay?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_147",
+    "question": "Kirk and Martin are partners and have agreed that, after interest at 6% is allowed on average investment, Kirk will receive one third and Martin two thirds of the remaining profits. On Jan. 1, Kirk's net worth was $72,000 and Martin's was $63,000. Kirk withdrew $3,000 on July 1 and made an additional investment of $1,200 on Nov, 1. On Aug. 1 Martin withdrew $1,800. If profits for the year amounted to $37,080, what was each partner's share?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_148",
+    "question": "In the event of bankruptcy, what is the order of payment of bonds, common stock, and preferred stock?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_149",
+    "question": "Distribution of overhead is based on floor space. Department Aoccupied 8,100 sq. ft. of the 121,500 sq. ft. of space used byHar-rison Manufacturing Company. Find department A's shareof overhead based on floor footage for a month in whichthe total overhead of the Harrison Manufacturing Company was $97,500.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_150",
+    "question": "John's $200 earns interest at the rate of 5% for one year, compounded quarterly. Show how he would calculate the interest without the aid of a formula or a table.",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_151",
+    "question": "A savings account containing $2000 earned 4% interest, compounded quarterly for 3 years, and then 5% interest, compounded semiannually, for the next two years. What was the final balance in the savings account? How much interest did it earn? (Use 6 decimals in table factor.)",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_152",
+    "question": "The sinking-fund-payment factor fori= 5(1/2)% = 4 is 0.2303. For the sameiand n, find the (a) uniform-series compound-amount factor, (b) capital-recovery factor, (c) uniform-series present- worth factor.",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_153",
+    "question": "A bedroom set with a cash value of $720 can be purchased on the installment plan for 18 monthly payments of $47.20 each. What is the annual interest rate?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_154",
+    "question": "Mr.Tencerhas a $10,000 mortgage at a rate of 6% payable in 10 years. After five years, Mr.Tencerowes $7,000 and decides to pay the total amount remaining. If there is a 3% prepayment penalty, what is the total amount Mr.Tencerhas to pay?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_155",
+    "question": "Mr. Golden owns property with a market value of $16,500. The property is located in a city where assessed valuation is 40% of actual value. If the tax rate in the city is 21.3 mills per dollar, how much does Mr. Golden pay in real estate taxes?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_156",
+    "question": "What is the difference in annual premiums of a $10,000 20-payment life policy purchased at age 30, as opposed to the same policy purchased at age 20?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_157",
+    "question": "Tim is a salesman who earns a guaranteed salary of $4800/year plus 4% of all sales up to $12,000; 5% of sales from $12,000 to $20,000; 6% of sales over $20,000 in any month. Last month Tim's sales were $21,750. Compute his gross earnings for last month.",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_158",
+    "question": "The Stadlow family, consisting of two adults and two children, went to the amusement park. The rides at the park are 75 cents for adults and 50 cents for children. Mr. Stadlow has $10, how many rides can the family go on?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_159",
+    "question": "Mr. Owens accepted a draft dated July 11 for $544.20 at 4% with a term of 3 months. He discounted it August 2 at 5%. The bank charged a (1/8)% collection fee. What were the proceeds?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_160",
+    "question": "Mr. Stone decides to take a loan from his bank to purchase a new car. If he borrows $4,000 for ninety days at 6 percent discount, how much will he actually receive?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_161",
+    "question": "ACEPLUS SALES COMPANY wants to pay its employees a bonus as an incentive. It is decided that 70% of the labor-cost savings for the quarter will be distributed to the employees. The employer will retain 30%. The quarterly sales information is: Total Sales Total Labor cost $100,000. $32,000. The standard total cost of labor is 40% of the adjusted sales price. (i) What is the total amount to be paid to the employees as an incentive? (ii) What percentage of wages earned in the quarter will the workers receive as bonus? (The bonus will be paid as a set percentage of the employee's earnings).",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_162",
+    "question": "During a 6-month heating season, a homeowner expects to average $40 a month for fuel oil. He has purchased the following amounts to date: $37.50, $42.60, $39.80, $40.75, $44.10. What amount will he spend during the last month to maintain the expected average?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_163",
+    "question": "Jack receives a 5% commission on all sales. If his sales for the week are $1,200, how much commission does he earn?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_164",
+    "question": "Mr. Atlas had a note for $45,000. He discounted it at his bank 120 days before it was due. The bank's discount rate was 6%. Find Mr. Atlas' proceeds.",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_165",
+    "question": "Two pumping systems are being considered for use on a project. The gasoline pump will cost $3,500, has a 6 year life year, and a $500 salvage value. Annual operating and repair costs would be $2,000 the first year, and would rise $300 each succeeding year. The electric pumping system costs $12,000, has a life of 6 years and a salvage value of $1,000. Annual operating and maintenance costs would be $1,000 the first year, and would rise $150 each year. If the current interest rate is 10%, compare the equivalent annual costs of the two pumping systems. Assume all maintenance and repair costs are paid at the end of each year.",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_166",
+    "question": "Mrs. Reeves accepted a note for $815.50 at 6% with a four month term on December 10. On January 10 she had it discounted at 6(1/2)%. A (1/8)% charge for collection when due was also made. How much did she receive?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_167",
+    "question": "John's-Rent-A-Truck purchased a van for $4,500. The truck isexpected to last 100,000 miles, and then have a trade-in valueof $500. What is the cost of deprecia-tion per mile?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_168",
+    "question": "Daniel receives at 6.5% commission on all sales. If he received a $275.08 commission, what were his sales?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_169",
+    "question": "The Global Bus Company purchases a bus for $40,000, and depreciates it on a straight-line basis for five years. What is the book value of the bus after 2 years of service?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_170",
+    "question": "On January 1, 1964, Stead and Company purchased a delivery truck for $4,000. It is estimated that the truck will have a useful life of four years, and that at the end of that time it will have a salvage value (resale value) of $400. It is expected that the truck will be used for 72,000 miles. Find the depreciation per year, if the truck was used for 20,000 miles during the first year, 25,000 miles during the second year, 18,000 miles during the third year and 9,000 miles during the fourth year. Use the units of production method for determining depreciation.",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_171",
+    "question": "Jim Miller bought a vacuum cleaner priced at $69.75, with a 5% discount. The state sales tax was 3% and the city sales tax was 4%. How much did Jim pay for the cleaner?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_172",
+    "question": "The McDougall Company produces and sells two qualities of carpet. The better quality carpeting sells for $6.00 per yard and has variable costs of 70 percent of sales. The other type costs $3.00 per yard and has variable costs of 60 percent of sales. Total fixed costs of both types of carpet combined are $122,200. If both carpets have the same dollar sales, how many yards of each must be sold to earn a profit of $50,000?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_173",
+    "question": "Mr. Haskell has decided to buy a rental property. The building costs $50,000 and the land costs $30,000. The annual rent income is estimated to be $10,450 and the annual expense, $3,200. Mr. Haskell plans to depreciate the building by the straight line method over 40 years. Mr. Haskell wants to choose the best of three investment plans. Plan A Pay the full $80,000 from personal account. Plan B Borrow $30,000 and pay $50,000 from personal account. Rate of interest is 4(1/2)%. Plan C Borrow $60,000 and pay $20,000 from personal account. Rate of interest is 5 (1/4)%. If the tax rate is 40%, which investment plan has the highest rate of return?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_174",
+    "question": "Costs for producing one widget: Materials:2 parts (a) $25.00 per part Expenses :$10.00 Labor :20 operations (a) $5.00 per operation Based on the above information, which is the only valid conclusion? (A) The selling price should be $160 per widget. (B) labor rates are excessive (C) output is labor intensive (D) material costs are low",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_175",
+    "question": "Costs for producing one widget: Materials:2 parts (a) $25.00 per part Expenses :$10.00 Labor :20 operations (a) $5.00 per operation Based on the above information, which is the only valid conclusion? (A) The selling price should be $160 per widget. (B) labor rates are excessive (C) output is labor intensive (D) material costs are low",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_176",
+    "question": "A $250 stove can be purchased under the installment plan for a $25 down-payment and 12 monthly payments of $20. What is the financing charge?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_177",
+    "question": "Given that the cost of mimeographing x number of copies is C(x) = 0.005x + [(4500) / x], what is the number of copies that will minimize the cost?",
+    "choices": [],
+    "answer": "H",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_178",
+    "question": "Paul took a loan of $384.75 for 60 days at 6% interest. How much interest did he pay?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_179",
+    "question": "Williamsville has a total assessed valuation of property of $6,250,000.The town requires $360,000 for educational purposesand $115,000 for health and welfare needs. What isthe town's tax rate in dollars per $100.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_180",
+    "question": "A bicycle selling for $82 can be purchased on the installment plan with no down-payment, but a 10% per year finance charge. How much should each of the monthly payments be to pay off the bicycle in six months?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_181",
+    "question": "A business started last year with an inventory of 90,000 items which cost $60,000 and had a selling price of $80,000, At the end of the year, the inventory consisted of 70,000 items which cost $90,000 and had a selling price of $120,000. Records indicate that, during the year, 360,000 items were sold which cost $300,000, with net sales of $380,000. What are thestockturnrates at cost, selling price, and number of units?",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_182",
+    "question": "A typewriter is priced at $80, less series discounts of 20%, 10%, 5%. What is the net price?",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_183",
+    "question": "(A) How many gallons are there in 12 liters? (B) How many liters are there in 10 quarts? Metric to Customary Units Customary to Metric Units 1 liter = 1.057 quarts .264 gallon 1 quart = .946 liter 1 gallon = 3.785 liters 1 milliliter = .0338 ounce 1 ounce = 29.57 milliliters",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_184",
+    "question": "PhilLeFrancpurchased (25 / 50) bodily injury insurance and $10,000 property damage insurance.The base premium for thebodily injury insurance was $101, while the base premiumfor the property damage coverage was $48. If Phil hada total factor of 1.37 for bodily injury and a total factor of 1.10forproperty damage, what was his premium for each typeof coverage?",
+    "choices": [],
+    "answer": "A",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_185",
+    "question": "A portable color television, listed at $280, is being sold at a discount, net price $196. What is the discount rate?",
+    "choices": [],
+    "answer": "B",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_186",
+    "question": "______ are the obligations of workers towards their employer, based on individual contracts and wider employment laws.",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_187",
+    "question": " _______ can be a likened to their natural counterparts, comprising of a balanced network of interdependent organisms and their environments thus adding value to sustainability thinking due to the consideration of companies and industries as being bound together, and interdependent due to all kinds of resources and wastes.",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_188",
+    "question": "A corporation is ________ from its managers, employees, investors and customers. It therefore has _______ succession and also ________.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_189",
+    "question": " _______, where actors are convinced that their actions harms nobody, _______ where actors argue that their norm violation is an attempt to realize higher-order values and ________ , where actors argue they are owed something, are all strategies for justifying or denying unethical behaviour.",
+    "choices": [],
+    "answer": "J",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_190",
+    "question": " Which of the following is the rate at which a market adopts an innovation?",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_191",
+    "question": " According to the British Government, which of the following is not a marketing function?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_192",
+    "question": "On August 4, a store purchased five sofas invoiced at $7,000, terms 2/10 , n/30 . The invoice was paid August 13. The store paid",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_193",
+    "question": " This is a part of the communication process where the sender selects a combination of appropriate words, pictures, symbols, and music to represent a message to be transmitted:",
+    "choices": [],
+    "answer": "G",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_194",
+    "question": "Which of the following is the best example of a trade discount?",
+    "choices": [],
+    "answer": "D",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_195",
+    "question": "Who of the following is a leading writer on contingency theory of leadership?",
+    "choices": [],
+    "answer": "I",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_196",
+    "question": "What is not an advantage of a hierarchical structure?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_197",
+    "question": "In what order do managers typically perform the managerial functions?",
+    "choices": [],
+    "answer": "F",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_198",
+    "question": "Aisha graduates college and starts a job. She saves $1000 each quarter, depositing it into a retirement savings account. Suppose that Aisha saves for 30 years and then retires. At retirement she wants to withdraw money as an annuity that pays a constant amount every month for 25 years. During the savings phase, the retirement account earns 6% interest compounded quarterly. During the annuity payout phase, the retirement account earns 4.8% interest compounded monthly. Calculate Aisha’s monthly retirement annuity payout.",
+    "choices": [],
+    "answer": "E",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  },
+  {
+    "id": "mmlupro_199",
+    "question": "Consider an arbitrage-free securities market model, in which the risk-free interest rate is constant. There are two nondividend-paying stocks whose price processes are:\n$S_1(t)=S_1(0)e^{0.1t+0.2Z(t)}$\n$S_2(t)=S_2(0)e^{0.125t+0.3Z(t)}$\nwhere $Z(t)$ is a standard Brownian motion ant $t\\ge0$. What is the continuously compounded risk-free interest rate?",
+    "choices": [],
+    "answer": "C",
+    "subject": "general",
+    "source": "MMLU-Pro"
+  }
+]

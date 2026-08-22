@@ -1,0 +1,8 @@
+{
+  "datasets": {
+    "gpqa": {
+      "error": "Dataset 'Idavidrein/gpqa' is a gated dataset on the Hub. Visit the dataset page at https://huggingface.co/datasets/Idavidrein/gpqa to ask for access."
+    }
+  },
+  "fetched_at": "2026-08-22T19:27:25.162165+00:00"
+}

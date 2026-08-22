@@ -1,0 +1,33 @@
+{
+  "model": "platt_sigmoid",
+  "params": {
+    "a": 4.20008754402442,
+    "b": -2.360744433593347,
+    "ece": 0.0883422473699127,
+    "n_samples": 902,
+    "threshold": 0.54,
+    "threshold_50": 0.562070292309036
+  },
+  "report": {
+    "accuracy": 0.6762749445676275,
+    "brier_score": 0.21590314997629587,
+    "confidence_mean_correct": 0.5130444374416031,
+    "confidence_mean_wrong": 0.4727496341067581,
+    "expected_calibration_error": 0.0883422473699127,
+    "f1": 0.6207792207792209,
+    "n_samples": 902,
+    "optimal_threshold": 0.54,
+    "params": {
+      "a": 4.20008754402442,
+      "b": -2.360744433593347,
+      "ece": 0.0883422473699127,
+      "n_samples": 902,
+      "threshold": 0.54,
+      "threshold_50": 0.562070292309036
+    },
+    "precision": 0.7492163009404389,
+    "recall": 0.5299334811529933,
+    "reliability_gap": 0.04029480333484503
+  },
+  "version": "0.5"
+}

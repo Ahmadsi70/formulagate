@@ -1,0 +1,98 @@
+{
+  "dataset": {
+    "source": "arXiv Atom API (live)",
+    "corpus_records": 451,
+    "cases": 500,
+    "grounded": 451,
+    "distractors": 49,
+    "embedder": "hash",
+    "threshold_objective": "balanced_accuracy",
+    "seconds": 154.3
+  },
+  "retrieval_dense_hybrid": {
+    "recall_at_1": 0.37250554323725055,
+    "recall_at_5": 0.8913525498891353,
+    "mrr": 0.5942737479322849,
+    "n_queries": 451
+  },
+  "retrieval_after_rerank": {
+    "recall_at_1": 0.5787139689578714,
+    "recall_at_5": 0.7583148558758315,
+    "mrr": 0.6473392461197341,
+    "n_queries": 451
+  },
+  "gate_shipped_default": {
+    "accuracy": 0.89,
+    "generate_precision": 0.9194915254237288,
+    "generate_recall": 0.9623059866962306,
+    "f1": 0.9404117009750812,
+    "abstain_recall": 0.22448979591836735,
+    "expected_calibration_error": 0.0756090392558332,
+    "brier_score": 0.09814553614118776,
+    "threshold": 0.5
+  },
+  "gate_calibrated_out_of_fold": {
+    "accuracy": 0.59,
+    "generate_precision": 0.9522058823529411,
+    "generate_recall": 0.5742793791574279,
+    "f1": 0.7164591977869986,
+    "abstain_recall": 0.7346938775510204,
+    "expected_calibration_error": 0.030340401215006634,
+    "brier_score": 0.0856555513249207,
+    "threshold_mean": 0.9,
+    "folds": 5,
+    "auc": 0.7079053350830354
+  },
+  "gate_fused_out_of_fold": {
+    "accuracy": 0.652,
+    "generate_precision": 0.9928825622775801,
+    "generate_recall": 0.6186252771618626,
+    "f1": 0.7622950819672132,
+    "abstain_recall": 0.9591836734693877,
+    "expected_calibration_error": 0.028529974444462022,
+    "brier_score": 0.0794347243053257,
+    "auc": 0.7908050138015295,
+    "threshold_mean": 0.8859999999999999,
+    "folds": 5
+  },
+  "physics_feature_coverage": {
+    "dimension_ok": 0.114,
+    "equivalence": 0.31,
+    "symbol_overlap": 0.332,
+    "candidate_has_formula": 0.922,
+    "grounding_sensitivity": 1.0,
+    "constraints_score": 0.936
+  },
+  "fused_weights": {
+    "score": 0.641054451049767,
+    "dimension_ok": -0.010733163864983786,
+    "equivalence": 0.27365570925252897,
+    "symbol_overlap": -0.5364171716643271,
+    "candidate_has_formula": -0.9220810629554843,
+    "grounding_sensitivity": 2.7482682894360915,
+    "constraints_score": -0.3384434607496729
+  },
+  "calibration_fitted": {
+    "n_samples": 500,
+    "accuracy": 0.59,
+    "precision": 0.9522058823529411,
+    "recall": 0.5742793791574279,
+    "f1": 0.7164591977869986,
+    "expected_calibration_error": 0.028555095748301878,
+    "brier_score": 0.08537920007134896,
+    "optimal_threshold": 0.9,
+    "confidence_mean_correct": 0.9199030803297884,
+    "confidence_mean_wrong": 0.8760672711043184,
+    "reliability_gap": 0.043835809225470035,
+    "params": {
+      "a": 2.4307653597034364,
+      "b": 0.8151506005573678,
+      "threshold": 0.9,
+      "threshold_50": -0.335347300101734,
+      "n_samples": 500,
+      "ece": 0.028555095748301878
+    }
+  },
+  "artifact": null,
+  "fused_artifact": null
+}

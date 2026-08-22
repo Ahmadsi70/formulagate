@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formulagate"
+version = "1.0.0"
+description = "Physics-aware LLM guardrail — deterministic dimensional analysis with Z3 SMT proof, 0% false-reject rate on 200+ real papers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = [
+  "hallucination",
+  "guardrail",
+  "dimensional-analysis",
+  "symbolic-mathematics",
+  "retrieval",
+  "calibration",
+  "physics",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+# The core gate and the whole deterministic layer run on the standard library
+# alone; every heavier capability is an opt-in extra.
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "rank-bm25>=0.2.2",
+  "numpy>=1.26",
+  "faiss-cpu>=1.8",
+  "sympy>=1.12",
+  "antlr4-python3-runtime>=4.11",
+]
+rag = ["rank-bm25>=0.2.2"]
+# Symbolic layer: dimensional analysis, canonicalisation, equivalence proofs.
+# Optional on purpose — without it every physics signal degrades to "unknown"
+# and the gate falls back to similarity instead of failing.
+physics = ["sympy>=1.12", "antlr4-python3-runtime>=4.11"]
+dense = [
+  "rank-bm25>=0.2.2",
+  "numpy>=1.26",
+  "faiss-cpu>=1.8",
+  "sentence-transformers>=3.0",
+]
+api = [
+  "fastapi>=0.100",
+  "uvicorn>=0.23",
+]
+
+[project.scripts]
+formulagate = "formulagate.cli:main"
+formulagate-api = "formulagate.api:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+formulagate = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "dense_model: tests that download sentence-transformers models",
+]

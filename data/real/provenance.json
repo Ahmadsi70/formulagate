@@ -1,0 +1,24 @@
+{
+  "built_on": "2026-07-25",
+  "source": "arXiv Atom API (live)",
+  "categories": {
+    "hep-th": 60,
+    "gr-qc": 60,
+    "quant-ph": 60,
+    "cond-mat.str-el": 60,
+    "math-ph": 60,
+    "nucl-th": 60,
+    "physics.optics": 31,
+    "astro-ph.CO": 60
+  },
+  "papers": 451,
+  "cases": 902,
+  "grounded_cases": 451,
+  "distractor_cases": 451,
+  "leak_controls": [
+    "query is the paper title; corpus text is the abstract",
+    "drafts are verbatim author sentences, never generated",
+    "negatives come from a different arXiv primary category",
+    "no per-case corpus filtering — retriever always sees every record"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "dimensional_pass_rate": 1.0,
+  "hallucination_catch_rate": 1.0,
+  "valid_count": 8,
+  "hall_count": 3,
+  "dim_pass": 8,
+  "hall_caught": 3
+}

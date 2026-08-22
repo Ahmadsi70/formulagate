@@ -1,0 +1,472 @@
+[
+  {
+    "brief": "modular residue congruence divisible number theory integers",
+    "draft": "n equiv 1 (mod 3); congruence classes",
+    "expect_generate": true,
+    "expected_top_id": "mod-congruence"
+  },
+  {
+    "brief": "count n modular arithmetic residue class congruence",
+    "draft": "use modular residues congruence classes",
+    "expect_generate": true,
+    "expected_top_id": "mod-congruence"
+  },
+  {
+    "brief": "integer congruence modulo n number theory",
+    "draft": "a equiv b pmod n",
+    "expect_generate": true,
+    "expected_top_id": "mod-congruence"
+  },
+  {
+    "brief": "periodic oscillation frequency vibration period mechanics sinusoidal",
+    "draft": "N(t) combines sin and cos with period T",
+    "expect_generate": true,
+    "expected_top_id": "harmonic-bridge"
+  },
+  {
+    "brief": "vibration oscillation frequency period sinusoidal motion",
+    "draft": "harmonic sinusoidal period T",
+    "expect_generate": true,
+    "expected_top_id": "harmonic-bridge"
+  },
+  {
+    "brief": "greatest common divisor euclidean algorithm integers gcd",
+    "draft": "gcd(a,b) reduces via remainder",
+    "expect_generate": true,
+    "expected_top_id": "gcd-euclidean"
+  },
+  {
+    "brief": "compute gcd using euclidean algorithm divisibility",
+    "draft": "remainder reduction gcd",
+    "expect_generate": true,
+    "expected_top_id": "gcd-euclidean"
+  },
+  {
+    "brief": "right triangle hypotenuse distance euclidean plane geometry",
+    "draft": "c^2 = a^2 + b^2",
+    "expect_generate": true,
+    "expected_top_id": "pythagorean"
+  },
+  {
+    "brief": "hypotenuse of right triangle geometry distance",
+    "draft": "pythagorean theorem a b c",
+    "expect_generate": true,
+    "expected_top_id": "pythagorean"
+  },
+  {
+    "brief": "stefan boltzmann thermal radiation blackbody temperature energy",
+    "draft": "radiant exitance proportional to T to the fourth",
+    "expect_generate": true,
+    "expected_top_id": "stefan-boltzmann"
+  },
+  {
+    "brief": "blackbody thermal radiation stefan boltzmann law",
+    "draft": "sigma T^4 flux",
+    "expect_generate": true,
+    "expected_top_id": "stefan-boltzmann"
+  },
+  {
+    "brief": "combinations counting choose binomial coefficient discrete",
+    "draft": "n choose k factorial form",
+    "expect_generate": true,
+    "expected_top_id": "binomial-coeff"
+  },
+  {
+    "brief": "binomial coefficient counting combinations discrete math",
+    "draft": "binom n k",
+    "expect_generate": true,
+    "expected_top_id": "binomial-coeff"
+  },
+  {
+    "brief": "conditional probability posterior prior likelihood bayesian inference",
+    "draft": "bayes rule posterior from likelihood",
+    "expect_generate": true,
+    "expected_top_id": "bayes-rule"
+  },
+  {
+    "brief": "bayesian inference prior likelihood posterior probability",
+    "draft": "P(H|D) formula",
+    "expect_generate": true,
+    "expected_top_id": "bayes-rule"
+  },
+  {
+    "brief": "ideal gas pressure volume temperature moles thermodynamics",
+    "draft": "PV = nRT",
+    "expect_generate": true,
+    "expected_top_id": "ideal-gas"
+  },
+  {
+    "brief": "thermodynamics ideal gas law pressure volume",
+    "draft": "nRT relation",
+    "expect_generate": true,
+    "expected_top_id": "ideal-gas"
+  },
+  {
+    "brief": "electric current resistance voltage ohm circuit",
+    "draft": "V equals I times R",
+    "expect_generate": true,
+    "expected_top_id": "ohm-law"
+  },
+  {
+    "brief": "ohm law voltage current resistance circuit",
+    "draft": "V=IR",
+    "expect_generate": true,
+    "expected_top_id": "ohm-law"
+  },
+  {
+    "brief": "refraction index angle snell optics light",
+    "draft": "n1 sin theta1 = n2 sin theta2",
+    "expect_generate": true,
+    "expected_top_id": "snell-law"
+  },
+  {
+    "brief": "snell law refraction optics angles",
+    "draft": "sine of incidence refraction",
+    "expect_generate": true,
+    "expected_top_id": "snell-law"
+  },
+  {
+    "brief": "spring force displacement hooke elasticity",
+    "draft": "F = -kx restoring",
+    "expect_generate": true,
+    "expected_top_id": "hooke-law"
+  },
+  {
+    "brief": "hooke law spring elasticity displacement",
+    "draft": "force proportional to x",
+    "expect_generate": true,
+    "expected_top_id": "hooke-law"
+  },
+  {
+    "brief": "mass energy equivalence relativity light speed",
+    "draft": "E = mc^2",
+    "expect_generate": true,
+    "expected_top_id": "einstein-mass"
+  },
+  {
+    "brief": "relativity mass energy light speed squared",
+    "draft": "einstein mass energy",
+    "expect_generate": true,
+    "expected_top_id": "einstein-mass"
+  },
+  {
+    "brief": "inequality inner product cauchy schwarz vectors",
+    "draft": "cauchy schwarz bound on inner product",
+    "expect_generate": true,
+    "expected_top_id": "cauchy-schwarz"
+  },
+  {
+    "brief": "cauchy schwarz inequality vectors norms",
+    "draft": "inner product squared bound",
+    "expect_generate": true,
+    "expected_top_id": "cauchy-schwarz"
+  },
+  {
+    "brief": "taylor series expansion derivative approximation",
+    "draft": "taylor expansion about a",
+    "expect_generate": true,
+    "expected_top_id": "taylor-exp"
+  },
+  {
+    "brief": "approximation by taylor series derivatives",
+    "draft": "sum f^(n)(a)/n!",
+    "expect_generate": true,
+    "expected_top_id": "taylor-exp"
+  },
+  {
+    "brief": "reaction rate activation energy temperature arrhenius chemistry",
+    "draft": "arrhenius exponential rate law",
+    "expect_generate": true,
+    "expected_top_id": "arrhenius"
+  },
+  {
+    "brief": "arrhenius equation chemistry activation energy",
+    "draft": "k = A exp(-Ea/RT)",
+    "expect_generate": true,
+    "expected_top_id": "arrhenius"
+  },
+  {
+    "brief": "acidity hydrogen ion concentration ph chemistry",
+    "draft": "pH negative log hydrogen",
+    "expect_generate": true,
+    "expected_top_id": "ph-definition"
+  },
+  {
+    "brief": "ph definition chemistry hydrogen concentration",
+    "draft": "pH = -log10 [H+]",
+    "expect_generate": true,
+    "expected_top_id": "ph-definition"
+  },
+  {
+    "brief": "fibonacci recurrence sequence integers combinatorics",
+    "draft": "F_n = F_{n-1}+F_{n-2}",
+    "expect_generate": true,
+    "expected_top_id": "fibonacci"
+  },
+  {
+    "brief": "fibonacci sequence recurrence discrete math",
+    "draft": "each term sum of previous two",
+    "expect_generate": true,
+    "expected_top_id": "fibonacci"
+  },
+  {
+    "brief": "laplacian divergence gradient potential field",
+    "draft": "laplacian is div of grad",
+    "expect_generate": true,
+    "expected_top_id": "laplacian"
+  },
+  {
+    "brief": "vector calculus laplacian operator gradient",
+    "draft": "nabla^2 f",
+    "expect_generate": true,
+    "expected_top_id": "laplacian"
+  },
+  {
+    "brief": "faraday induction magnetic flux electric field maxwell",
+    "draft": "curl E equals -dB/dt",
+    "expect_generate": true,
+    "expected_top_id": "maxwell-faraday"
+  },
+  {
+    "brief": "maxwell faraday law induction magnetic",
+    "draft": "nabla cross E",
+    "expect_generate": true,
+    "expected_top_id": "maxwell-faraday"
+  },
+  {
+    "brief": "poisson distribution probability count rate lambda",
+    "draft": "poisson pmf e^{-lambda}",
+    "expect_generate": true,
+    "expected_top_id": "poisson-pmf"
+  },
+  {
+    "brief": "poisson probability mass function count process",
+    "draft": "P(K=k) poisson",
+    "expect_generate": true,
+    "expected_top_id": "poisson-pmf"
+  },
+  {
+    "brief": "wave equation string vibration speed celerity",
+    "draft": "u_tt = c^2 u_xx",
+    "expect_generate": true,
+    "expected_top_id": "wave-equation"
+  },
+  {
+    "brief": "pde wave equation vibration string",
+    "draft": "second time derivative wave",
+    "expect_generate": true,
+    "expected_top_id": "wave-equation"
+  },
+  {
+    "brief": "logistic map chaos discrete dynamical system",
+    "draft": "x_{n+1}=r x_n (1-x_n)",
+    "expect_generate": true,
+    "expected_top_id": "logistic-map"
+  },
+  {
+    "brief": "chaos logistic map dynamical systems",
+    "draft": "discrete logistic iteration",
+    "expect_generate": true,
+    "expected_top_id": "logistic-map"
+  },
+  {
+    "brief": "modular residue congruence divisible number theory",
+    "draft": "use integral of energy over time as analogy",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "modular residue congruence number theory",
+    "draft": "navier stokes fluid viscosity proves congruence",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "greatest common divisor euclidean gcd",
+    "draft": "pasta boiling water cooking recipe analogy",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "binomial coefficient combinations counting",
+    "draft": "fluid viscosity continuum pressure analogy",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "cauchy schwarz inequality vectors",
+    "draft": "unrelated cooking recipe pasta salt",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "taylor series expansion derivatives",
+    "draft": "navier stokes proves taylor",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "stefan boltzmann thermal radiation",
+    "draft": "cooking pasta proves radiation",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "bayesian inference posterior prior",
+    "draft": "integral energy flux as bayes proof",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "ohm law voltage current",
+    "draft": "navier decoy fluid as circuit law",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "fibonacci recurrence sequence",
+    "draft": "claudius cooking decoy as proof",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "wave equation vibration string",
+    "draft": "pasta recipe wave analogy",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "ph definition chemistry hydrogen",
+    "draft": "fluid dynamics proves ph",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "arrhenius reaction rate chemistry",
+    "draft": "integral decoy as kinetics",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "hooke law spring force",
+    "draft": "navier stokes spring analogy",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "snell law refraction optics",
+    "draft": "cooking water refraction myth",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "poisson distribution count lambda",
+    "draft": "claudius decoy poisson myth",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "laplacian gradient divergence",
+    "draft": "pasta laplacian nonsense",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "maxwell faraday induction",
+    "draft": "cooking magnetic myth",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "logistic map chaos dynamical",
+    "draft": "integral energy chaos myth",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "ideal gas thermodynamics PV",
+    "draft": "navier fluid as ideal gas proof",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "pythagorean hypotenuse geometry",
+    "draft": "cooking triangle myth",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "einstein mass energy relativity",
+    "draft": "pasta mass energy myth",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "modular congruence number theory",
+    "draft": "claudius decoy congruence",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "harmonic oscillation frequency period",
+    "draft": "integral decoy harmonic",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  },
+  {
+    "brief": "gcd euclidean algorithm integers",
+    "draft": "navier decoy gcd",
+    "expect_generate": false,
+    "corpus_ids": [
+      "claudius-decoy"
+    ]
+  }
+]

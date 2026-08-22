@@ -1,0 +1,154 @@
+[
+  {
+    "id": "decoy-integral",
+    "english": "count field creation light measure energy flux",
+    "math_formula": "E(t) = \\int c \\, dt",
+    "scientific_domain": null
+  },
+  {
+    "id": "mod-congruence",
+    "english": "equitable measure number modular residue congruence divisible arithmetic integers",
+    "math_formula": "a \\equiv b \\pmod{n}",
+    "scientific_domain": "Number Theory",
+    "surah": 2,
+    "ayah": 83
+  },
+  {
+    "id": "harmonic-bridge",
+    "english": "periodic motion vibration oscillation frequency period mechanics sinusoidal",
+    "math_formula": "N(t) = A\\sin(2\\pi t / T) + B\\cos(2\\pi t / T)",
+    "scientific_domain": "Classical Mechanics"
+  },
+  {
+    "id": "gcd-euclidean",
+    "english": "greatest common divisor gcd euclidean algorithm integers divisibility",
+    "math_formula": "\\gcd(a,b) = \\gcd(b, a \\bmod b)",
+    "scientific_domain": "Number Theory"
+  },
+  {
+    "id": "pythagorean",
+    "english": "right triangle hypotenuse distance euclidean plane geometry",
+    "math_formula": "c^{2} = a^{2} + b^{2}",
+    "scientific_domain": "Geometry"
+  },
+  {
+    "id": "stefan-boltzmann",
+    "english": "thermal radiation energy flux stefan boltzmann blackbody temperature",
+    "math_formula": "j^{\\star} = \\sigma T^{4}",
+    "scientific_domain": "Thermal Physics"
+  },
+  {
+    "id": "binomial-coeff",
+    "english": "combinations counting choose binomial coefficient discrete",
+    "math_formula": "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+    "scientific_domain": "Combinatorics"
+  },
+  {
+    "id": "navier-decoy",
+    "english": "fluid viscosity continuum pressure velocity field",
+    "math_formula": "\\rho(\\partial_t v + v\\cdot\\nabla v) = -\\nabla p + \\mu\\nabla^{2}v",
+    "scientific_domain": "Fluid Dynamics"
+  },
+  {
+    "id": "bayes-rule",
+    "english": "conditional probability posterior prior likelihood bayesian inference",
+    "math_formula": "P(H\\mid D) = \\frac{P(D\\mid H)P(H)}{P(D)}",
+    "scientific_domain": "Probability"
+  },
+  {
+    "id": "ideal-gas",
+    "english": "ideal gas pressure volume temperature moles thermodynamics",
+    "math_formula": "PV = nRT",
+    "scientific_domain": "Thermodynamics"
+  },
+  {
+    "id": "ohm-law",
+    "english": "electric current resistance voltage ohm circuit",
+    "math_formula": "V = IR",
+    "scientific_domain": "Electromagnetism"
+  },
+  {
+    "id": "snell-law",
+    "english": "refraction index angle snell optics light",
+    "math_formula": "n_1\\sin\\theta_1 = n_2\\sin\\theta_2",
+    "scientific_domain": "Optics"
+  },
+  {
+    "id": "hooke-law",
+    "english": "spring force displacement hooke elasticity",
+    "math_formula": "F = -kx",
+    "scientific_domain": "Classical Mechanics"
+  },
+  {
+    "id": "einstein-mass",
+    "english": "mass energy equivalence relativity light speed",
+    "math_formula": "E = mc^{2}",
+    "scientific_domain": "Relativity"
+  },
+  {
+    "id": "cauchy-schwarz",
+    "english": "inequality inner product cauchy schwarz vectors",
+    "math_formula": "|\\langle u,v\\rangle|^{2} \\le \\|u\\|^{2}\\|v\\|^{2}",
+    "scientific_domain": "Analysis"
+  },
+  {
+    "id": "taylor-exp",
+    "english": "taylor series expansion derivative approximation",
+    "math_formula": "f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^{n}",
+    "scientific_domain": "Analysis"
+  },
+  {
+    "id": "arrhenius",
+    "english": "reaction rate activation energy temperature arrhenius chemistry",
+    "math_formula": "k = A e^{-E_a/(RT)}",
+    "scientific_domain": "Chemistry"
+  },
+  {
+    "id": "ph-definition",
+    "english": "acidity hydrogen ion concentration ph chemistry",
+    "math_formula": "\\mathrm{pH} = -\\log_{10}[H^{+}]",
+    "scientific_domain": "Chemistry"
+  },
+  {
+    "id": "fibonacci",
+    "english": "fibonacci recurrence sequence integers combinatorics",
+    "math_formula": "F_n = F_{n-1}+F_{n-2}",
+    "scientific_domain": "Discrete Math"
+  },
+  {
+    "id": "laplacian",
+    "english": "laplacian divergence gradient potential field",
+    "math_formula": "\\nabla^{2}f = \\nabla\\cdot\\nabla f",
+    "scientific_domain": "Vector Calculus"
+  },
+  {
+    "id": "maxwell-faraday",
+    "english": "faraday induction magnetic flux electric field maxwell",
+    "math_formula": "\\nabla\\times E = -\\partial_t B",
+    "scientific_domain": "Electromagnetism"
+  },
+  {
+    "id": "claudius-decoy",
+    "english": "unrelated cooking recipe pasta boiling water salt",
+    "math_formula": "x=1+1",
+    "scientific_domain": null
+  },
+  {
+    "id": "poisson-pmf",
+    "english": "poisson distribution probability count rate lambda",
+    "math_formula": "P(K=k)=e^{-\\lambda}\\lambda^{k}/k!",
+    "scientific_domain": "Probability"
+  },
+  {
+    "id": "wave-equation",
+    "english": "wave equation string vibration speed celerity",
+    "math_formula": "\\partial_{tt}u = c^{2}\\partial_{xx}u",
+    "scientific_domain": "PDE"
+  },
+  {
+    "id": "logistic-map",
+    "english": "logistic map chaos discrete dynamical system",
+    "math_formula": "x_{n+1}=rx_n(1-x_n)",
+    "scientific_domain": "Dynamical Systems"
+  }
+]

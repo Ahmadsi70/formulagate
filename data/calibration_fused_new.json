@@ -1,0 +1,41 @@
+{
+  "bias": 0.0,
+  "ece": null,
+  "feature_names": [
+    "score",
+    "dimension_ok",
+    "equivalence",
+    "symbol_overlap",
+    "candidate_has_formula",
+    "grounding_sensitivity",
+    "constraints_score"
+  ],
+  "kind": "multi",
+  "model": "multivariate_logistic",
+  "n_samples": 50,
+  "report": {
+    "out_of_fold": {
+      "abstain_recall": 0.0,
+      "accuracy": 1.0,
+      "auc": 0.5,
+      "brier_score": 0.25,
+      "expected_calibration_error": 0.5,
+      "f1": 1.0,
+      "folds": 3,
+      "generate_precision": 1.0,
+      "generate_recall": 1.0,
+      "threshold_mean": 0.5
+    }
+  },
+  "threshold": 0.5,
+  "version": "0.5",
+  "weights": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

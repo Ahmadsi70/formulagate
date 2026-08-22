@@ -1,0 +1,33 @@
+{
+  "model": "platt_sigmoid",
+  "params": {
+    "a": 8.0,
+    "b": -2.8,
+    "ece": null,
+    "n_samples": 50,
+    "threshold": 0.5,
+    "threshold_50": 0.35
+  },
+  "report": {
+    "accuracy": 0.96,
+    "brier_score": 0.03196931603664722,
+    "confidence_mean_correct": 0.8890713721925834,
+    "confidence_mean_wrong": 0.4131687166298679,
+    "expected_calibration_error": 0.1299647340299253,
+    "f1": 0.9795918367346939,
+    "n_samples": 50,
+    "optimal_threshold": 0.5,
+    "params": {
+      "a": 8.0,
+      "b": -2.8,
+      "ece": null,
+      "n_samples": 50,
+      "threshold": 0.5,
+      "threshold_50": 0.35
+    },
+    "precision": 1.0,
+    "recall": 0.96,
+    "reliability_gap": 0.47590265556271544
+  },
+  "version": "0.5"
+}

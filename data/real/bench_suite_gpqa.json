@@ -1,0 +1,32 @@
+{
+  "config": {
+    "corpus": "/workspace/formulagate/data/real/arxiv_corpus.json",
+    "embedder": "hash",
+    "folds": 5,
+    "runpod": false,
+    "ssh": null
+  },
+  "benchmarks": {
+    "gpqa": {
+      "n_cases": 200,
+      "n_positive": 200,
+      "n_negative": 0,
+      "accuracy": 1.0,
+      "note": "single class — no train/test split possible",
+      "seconds": 10.6,
+      "source": "/workspace/formulagate/data/benchmarks/gpqa.json",
+      "meta": {
+        "name": "GPQA",
+        "url": "https://huggingface.co/datasets/Idavidrein/gpqa"
+      }
+    }
+  },
+  "aggregate": {
+    "n_datasets": 1,
+    "total_cases": 200,
+    "total_seconds": 10.6,
+    "mean_accuracy": 1.0,
+    "mean_ece": null
+  },
+  "report_path": "data/real/bench_suite_gpqa.json"
+}

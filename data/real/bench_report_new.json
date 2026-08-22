@@ -1,0 +1,98 @@
+{
+  "dataset": {
+    "source": "arXiv Atom API (live)",
+    "corpus_records": 451,
+    "cases": 50,
+    "grounded": 50,
+    "distractors": 0,
+    "embedder": "hash",
+    "threshold_objective": "balanced_accuracy",
+    "seconds": 52.0
+  },
+  "retrieval_dense_hybrid": {
+    "recall_at_1": 0.48,
+    "recall_at_5": 0.9,
+    "mrr": 0.6475555555555553,
+    "n_queries": 50
+  },
+  "retrieval_after_rerank": {
+    "recall_at_1": 0.6,
+    "recall_at_5": 0.76,
+    "mrr": 0.6706666666666666,
+    "n_queries": 50
+  },
+  "gate_shipped_default": {
+    "accuracy": 0.96,
+    "generate_precision": 1.0,
+    "generate_recall": 0.96,
+    "f1": 0.9795918367346939,
+    "abstain_recall": 0.0,
+    "expected_calibration_error": 0.1299647340299253,
+    "brier_score": 0.03196931603664722,
+    "threshold": 0.5
+  },
+  "gate_calibrated_out_of_fold": {
+    "accuracy": 0.96,
+    "generate_precision": 1.0,
+    "generate_recall": 0.96,
+    "f1": 0.9795918367346939,
+    "abstain_recall": 0.0,
+    "expected_calibration_error": 0.1299647340299253,
+    "brier_score": 0.03196931603664722,
+    "threshold_mean": 0.5,
+    "folds": 3,
+    "auc": 0.5
+  },
+  "gate_fused_out_of_fold": {
+    "accuracy": 1.0,
+    "generate_precision": 1.0,
+    "generate_recall": 1.0,
+    "f1": 1.0,
+    "abstain_recall": 0.0,
+    "expected_calibration_error": 0.5,
+    "brier_score": 0.25,
+    "auc": 0.5,
+    "threshold_mean": 0.5,
+    "folds": 3
+  },
+  "physics_feature_coverage": {
+    "dimension_ok": 0.06,
+    "equivalence": 0.36,
+    "symbol_overlap": 0.4,
+    "candidate_has_formula": 0.98,
+    "grounding_sensitivity": 1.0,
+    "constraints_score": 0.98
+  },
+  "fused_weights": {
+    "score": 0.0,
+    "dimension_ok": 0.0,
+    "equivalence": 0.0,
+    "symbol_overlap": 0.0,
+    "candidate_has_formula": 0.0,
+    "grounding_sensitivity": 0.0,
+    "constraints_score": 0.0
+  },
+  "calibration_fitted": {
+    "n_samples": 50,
+    "accuracy": 0.96,
+    "precision": 1.0,
+    "recall": 0.96,
+    "f1": 0.9795918367346939,
+    "expected_calibration_error": 0.1299647340299253,
+    "brier_score": 0.03196931603664722,
+    "optimal_threshold": 0.5,
+    "confidence_mean_correct": 0.8890713721925834,
+    "confidence_mean_wrong": 0.4131687166298679,
+    "reliability_gap": 0.47590265556271544,
+    "params": {
+      "a": 8.0,
+      "b": -2.8,
+      "threshold": 0.5,
+      "threshold_50": 0.35,
+      "n_samples": 50,
+      "ece": null
+    }
+  },
+  "artifact": "data\\calibration_real_new.json",
+  "fused_artifact": "data\\calibration_fused_new.json"
+}
