@@ -1,0 +1,3 @@
+# no-mistakes repo config
+# This repository has no hosted CI yet; the validation pipeline runs tests locally.
+no_ci: true
