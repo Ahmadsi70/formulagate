@@ -130,6 +130,7 @@ def test_certain_constants_reach_braced_free_symbols() -> None:
     assert anchored
     assert any("epsilon_0" in s.replace("{", "").replace("}", "") for s in anchors)
 
+
 def test_raw_string_input_does_not_crash() -> None:
     # check_dimensions_smt used to assume a Formula object and raise
     # AttributeError on formula.parse_error when handed a raw LaTeX string.

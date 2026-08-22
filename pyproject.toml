@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "formulagate"
 version = "1.0.1"
-description = "Physics-aware LLM guardrail — deterministic dimensional analysis with Z3 SMT proof, 0% false-reject rate on 200+ real papers"
+description = "Physics-aware LLM guardrail — deterministic dimensional analysis with Z3 SMT proof and calibrated abstention"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
