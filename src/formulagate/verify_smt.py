@@ -145,8 +145,12 @@ def check_dimensions_smt(
     """
     import z3
 
+    if isinstance(formula, str):
+        from formulagate.formula_extract import canonicalize
+
+        formula = canonicalize(formula)
     if not getattr(formula, "canonical", None):
-        return SmtVerdict("unknown", detail=formula.parse_error or "no canonical form")
+        return SmtVerdict("unknown", detail=getattr(formula, "parse_error", None) or "no canonical form")
 
     expr = _sympy_expr(formula)
     if not getattr(expr, "free_symbols", None):

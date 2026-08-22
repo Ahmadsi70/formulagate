@@ -75,7 +75,7 @@ def fetch_gpqa(output_dir: Path, limit: int | None = None) -> Path:
 def fetch_truthfulqa(output_dir: Path, limit: int | None = None) -> Path:
     """TruthfulQA: questions that probe false beliefs and misconceptions.
 
-    Source: https://huggingface.co/datasets/truthful_qa (generation split).
+    Source: https://huggingface.co/datasets/truthfulqa/truthful_qa (generation split).
     """
     try:
         from datasets import load_dataset
@@ -84,7 +84,7 @@ def fetch_truthfulqa(output_dir: Path, limit: int | None = None) -> Path:
         return output_dir / "truthfulqa.json"
 
     print("Fetching TruthfulQA ...")
-    ds = load_dataset("truthful_qa", "generation", split="validation")
+    ds = load_dataset("truthfulqa/truthful_qa", "generation", split="validation")
 
     rows = []
     for i, item in enumerate(ds):

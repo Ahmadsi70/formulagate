@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.0.1 — 2026-08-22
+
+### Release readiness (fresh-run validation on a clean 48-core host)
+
+All public claims re-measured from scratch (no caches); reports committed
+under `data/real/bench_*_server*.json`.
+
+- **Fixed**: `antlr4-python3-runtime` pinned to `==4.11.*` — sympy's LaTeX
+  parser silently fails on 4.13, degrading every formula to "unknown".
+- **Fixed**: `check_dimensions_smt()` crashes with `AttributeError` when
+  handed a raw LaTeX string; strings are now canonicalised, garbage
+  degrades to `unknown` (regression test added).
+- **Fixed**: TruthfulQA fetcher used a malformed dataset id; now
+  `truthfulqa/truthful_qa`.
+- **Docs**: README rewritten around reproduced numbers — fused gate
+  72.6% accuracy / 90.8% generate precision / ECE 0.025; veto FPR 0.99%
+  (7/706, all input artifacts); 100% pass-through on MMLU/MMLU-Pro/
+  GPQA/TruthfulQA; honest-limitations section added.
+- **Repo hygiene**: coverage artifacts, faiss caches, per-run JSONL
+  caches and re-fetchable 75 MB arXiv LaTeX sources excluded from git.
+
 ## v1.0.0 — 2025-08-04
 
 ### First Production Release

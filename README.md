@@ -1,23 +1,30 @@
 # Formulagate v1.0.0
 
-**Deterministic dimensional analysis as an LLM guardrail.**
+**A proof-based physics gate for LLM outputs — every rejection is a Z3 proof, every uncertainty is an abstention.**
 
-When an LLM claims "E = m c³ is the energy-mass relation," Formulagate
-proves it wrong — not by guessing, but by Z3 SMT proof.  When it cannot
-prove either way, it **abstains** rather than guess.
+When an LLM claims "E = m c³ is the energy-mass relation", Formulagate
+proves it wrong — not by scoring, but by SMT proof over the linear system
+of dimension exponents. When it cannot prove either way, it **abstains**
+rather than guess.
 
-**0.0% false-reject rate** on 200 real arXiv papers across 8 industries.
+- **443 tests, all passing** — deterministic layer runs on the standard library alone
+- **Zero false rejects** on 1,950 general-knowledge cases (MMLU, MMLU-Pro, GPQA, TruthfulQA)
+- **90.8% generate precision, ECE 0.025** on 902 real arXiv cases (5-fold, out-of-fold)
+- **Deterministic**: identical inputs → byte-identical outputs, no neural model loaded by default
 
 ```bash
-pip install formulagate            # core gate, zero dependencies
-pip install "formulagate[physics]" # + SymPy, for canonicalisation and equivalence
-pip install "formulagate[dense]"   # + embeddings and reranking
+pip install git+https://github.com/Ahmadsi70/formulagate.git     # core gate, zero dependencies
+pip install "formulagate[physics] @ git+https://github.com/Ahmadsi70/formulagate.git"
+# + SymPy, for canonicalisation and equivalence
+pip install "formulagate[dense] @ git+https://github.com/Ahmadsi70/formulagate.git"
+# + embeddings and reranking
 ```
 
-## SDK
+> **Version note:** the `[physics]` extra pins `antlr4-python3-runtime==4.11.*`.
+> sympy's LaTeX parser is compiled against one antlr4 major; 4.13 silently
+> fails and every formula degrades to "unknown".
 
-Two calls cover the product. Both return plain dataclasses with `to_dict()`, and
-neither raises on malformed LaTeX.
+## The gate in 10 lines
 
 ```python
 from formulagate.sdk import Formulagate
@@ -34,181 +41,154 @@ if decision.action == "abstain":
     ...  # decision.detail says why; decision.confidence says how sure
 ```
 
-`Formulagate(calibration=..., fused_calibration=...)` installs fitted artifacts,
-`use_physics=False` disables the algebraic veto, `semantic=True` switches scoring
-to embeddings. Left at the default (`semantic=False`) **no neural model is ever
-loaded** — measured 1.3 ms per `verify()` and 6 ms per `check()` over 200
-sources, single CPU thread. The same surface is available as one-off functions
-(`from formulagate.sdk import verify, check`) and as a CLI:
+A draft whose own equation fails dimensional analysis is rejected before
+similarity is even consulted (`use_physics=False` disables it). Neither
+call raises on malformed LaTeX.
 
 ```bash
 formulagate verify --formula "E = m c^3"
+# dimensions: inconsistent — added terms differ: M L^2 T^-2 vs M L^3 T^-3
+
 formulagate gate --brief "..." --draft "..." --corpus data/sample_corpus.json
 ```
 
-## Deterministic physics layer
+## Why proof, not probability?
 
-| module | question it answers | failure mode |
-|---|---|---|
-| `formula_extract` | what is the equation, in canonical form? | unparsable → `parse_error`, never a crash |
-| `dimensions` | can this be physics at all? | ambiguous symbol → `unknown`, never a guess |
-| `equivalence` | is it the *same* relation? (hash → symbolic → numeric) | inconclusive → `unknown` |
-| `physics_signals` | the four features the gate consumes | any failure → neutral feature |
+Every mainstream guardrail (NeMo Guardrails, Guardrails AI, Lakera, …)
+scores text with a learned model and thresholds it. Formulagate is
+narrower and sharper: for **physics equations** it builds one linear
+equation per additive term over the seven SI base-dimension exponents,
+pins every prose-grounded symbol, and hands the system to **Z3**:
 
-```bash
-formulagate verify --formula "E = m c^2" --against "m c^2 = E"
-# dimensions: consistent — all terms are M L^2 T^-2
-# equivalence: equivalent via hash — identical canonical structure
-```
-
-A draft whose own equation fails dimensional analysis is rejected before
-similarity is even consulted (`--no-physics` disables it). Every check
-degrades to "unknown" rather than to a wrong answer, because on this gate a
-false reject costs more than an abstention.
-
-```bash
-formulagate verify --formula "E = m c^2" --against "m c^2 = E"
-pip install -e ".[dev]" && pytest -q     # 247 tests
-```
-
-## New in v0.7
-
-| module | what it does |
+| result | meaning |
 |---|---|
-| `conformal` | risk-controlled thresholds with finite-sample FDR guarantee (CIC) |
-| `atomic` | decompose drafts into independently verifiable claims (FactScore-style) |
-| `grounding` | measure evidence-dependence via sensitivity to context removal (GASP) |
-| `semantic_entropy` | cluster outputs by meaning, flag high uncertainty (Nature 2024) |
-| `physics_constraints` | conservation laws, classical limits, time-reversal symmetry |
+| `unsat` | a resolution proof exists — the equation is *provably* not physics |
+| `sat` | consistent under the grounded symbols (reported only when every symbol is pinned) |
+| `unknown` | under-constrained — the gate abstains, because a false reject costs more than silence |
 
-## Confidence calibration
+This is why the gate never fires on general prose (0 false rejects on
+1,950 standard NLP cases) and never guesses: **when it speaks, it has a
+proof; when it is not sure, it is silent.**
 
-The gate reports a **calibrated probability**, not a raw score. Platt scaling maps
-the combined lexical+semantic score to `P(citation is correct)`:
+## Benchmarks — real data, reproducible
 
-$$
-\mathrm{confidence} = \sigma(a\cdot\mathrm{score} + b)
-\quad;\quad
-\mathrm{accept}\iff\mathrm{confidence}\ge\theta
-$$
+All numbers below were produced by fresh runs (no caches) on a clean
+machine. Every benchmark rebuilds itself from live sources —
+`scripts/fetch_arxiv_benchmark.py` for the corpus, `scripts/fetch_benchmarks.py`
+for the standard datasets.
 
-`(a, b, θ)` are fitted from labeled cases. `θ` maximises **balanced accuracy** by
-default: F-beta never counts true negatives, so on real overlapping scores it
-drifts toward "always generate" — the one failure mode a gate must not have.
-Pass `--objective fbeta` to optimise the generate class only.
+### 1. Gate on real arXiv cases (902 cases, 5-fold out-of-fold)
 
-```bash
-# Fit and store an artifact
-formulagate calibrate --golden data/golden_cases.json --corpus data/sample_corpus.json \
-    --embedder hash --out data/calibration.json
+Corpus records are real paper abstracts; the query is the paper *title*
+(not a substring of the abstract — leak-controlled); grounded drafts are
+verbatim author sentences, distractor drafts come from a different arXiv
+category.
 
-# Reuse it in any decision path
-formulagate rag --brief "..." --draft "..." --corpus data/sample_corpus.json \
-    --calibration data/calibration.json --json
-export FORMULAGATE_CALIBRATION=data/calibration.json   # or set it process-wide
-```
+| model | accuracy | generate precision | abstain recall | ECE ↓ | AUC |
+|---|---|---|---|---|---|
+| shipped default | 69.2% | 62.4% | 41.7% | 0.314 | — |
+| calibrated (Platt) | 64.3% | 74.9% | 85.6% | 0.102 | 0.674 |
+| **+ physics + grounding (fused)** | **72.6%** | **90.8%** | **94.9%** | **0.025** | **0.772** |
 
-Flags: `--beta 0.5` favours precision over recall when picking `θ`, `--l2` shrinks
-the slope (flatter, less confident curve), `--max-ece` turns the fit into a CI gate.
+The fused model is what ships in `data/calibration_fused.json`. ECE 0.025
+means a reported confidence of 0.80 implies ≈80% correctness — the
+calibration is honest, not decorative.
 
-## Benchmark — live arXiv, no synthetic cases
-
-Earlier releases quoted ~97% accuracy against golden files whose queries were
-copied out of the target record. Those files are gone. The benchmark now builds
-itself from the arXiv API, and every field comes from a different human-written
-surface of a real paper:
-
-| field | source | leak control |
-|---|---|---|
-| corpus record | paper abstract + its LaTeX spans | — |
-| query (`brief`) | paper **title** | not a substring of the abstract |
-| grounded draft | a math-bearing sentence of that abstract | verbatim author text |
-| distractor draft | same, from a **different arXiv category** | label follows provenance |
-
-The retriever always sees all 451 records; no per-case corpus slicing.
-
-```bash
-python scripts/fetch_arxiv_benchmark.py --per-category 60   # 451 papers, 902 cases
-python scripts/bench_real.py --out data/calibration.json    # retrieval + gate + 5-fold
-```
-
-**Retrieval** (451 title→abstract queries, MiniLM + BM25 hybrid):
+### 2. Retrieval (451 title→abstract queries, MiniLM + BM25 hybrid)
 
 | stage | Recall@1 | Recall@5 | MRR |
 |---|---|---|---|
-| dense hybrid | 43.0% | **98.0%** | 0.644 |
-| + Formulagate reranker | **55.2%** | 70.7% | 0.610 |
+| dense hybrid | 43.0% | **98.0%** | **0.644** |
+| + Formulagate reranker | 45.0% | 66.7% | 0.530 |
 
-The reranker buys top-1 precision and pays for it with 27 points of Recall@5 —
-it is the right choice only when the consumer reads a single hit.
+The reranker buys top-1 precision and pays for it with Recall@5 — use it
+only when the consumer reads a single hit.
 
-**Gate** (902 cases, out-of-fold, stratified 5-fold):
+### 3. The dimensional veto on complete equations (142 real papers)
 
-| | accuracy | abstain recall | generate precision | ECE ↓ | Brier ↓ |
-|---|---|---|---|---|---|
-| default `(8.0, −2.8)`, θ=0.50 | **70.1%** | 43.5% | 0.631 | 0.302 | 0.317 |
-| fitted, balanced-accuracy θ=0.54 | 66.2% | **80.3%** | **0.725** | **0.082** | 0.216 |
-
-The raw score separates grounded from cross-domain drafts at AUC 0.711, so this
-is a real ceiling, not a threshold artifact: calibration cannot invent signal it
-does not have. What it does fix is honesty — a reported 0.7 now means roughly
-70% of such accepts are right (ECE 0.30 → 0.08), and abstain recall nearly
-doubles for 4 points of accuracy. `data/calibration.json` ships that fit (n=902).
-
-### Fusing algebra with similarity
-
-Same 902 cases, same folds, adding the physics features to the logistic fit
-(`data/calibration_fused.json`):
-
-| | AUC | accuracy | abstain recall | generate precision | ECE ↓ | Brier ↓ |
-|---|---|---|---|---|---|---|
-| similarity only | 0.711 | 66.2% | 80.3% | 0.725 | 0.082 | 0.216 |
-| + physics features (v0.6) | 0.731 | 69.2% | 91.6% | 0.847 | 0.073 | 0.203 |
-| **+ grounding + constraints (v0.7)** | **0.791** | **65.2%** | **95.9%** | **0.993** | **0.029** | **0.079** |
-
-The v0.7 fused model trades 4 points of accuracy for near-perfect precision
-(99.3%) and abstain recall (95.9%).  The `grounding_sensitivity` feature alone
-carries weight **+4.02** — the strongest signal in the model, 4.6× the lexical
-score.  ECE drops to 0.029, meaning a reported confidence of 0.80 actually
-implies ~80% chance of correctness.
-
-### Where the dimensional veto actually applies
-
-The real full-text benchmark (`scripts/bench_fulltext.py`) lifts every complete
-equation from 142 arXiv LaTeX sources, grounds symbols from the surrounding
-prose, and asks Z3 to prove or refute dimensional consistency:
+`scripts/bench_fulltext.py` lifts every equation from real arXiv LaTeX
+sources, grounds symbols from surrounding prose, and asks Z3 to decide:
 
 | measurement | value |
 |---|---|
-| papers | 142 |
-| equations extracted / parsable | 10551 / 5051 |
-| symbol-grounding coverage | 96.8% |
-| **false vetoes on real equations (FPR_smt)** | **0 / 800 = 0.0%** |
-| papers / equations evaluated | 200 / 6,346 |
-| equations with a prose-stated anchor (falsifiable) | 119 |
-| anchored decisions / false positives | 119 / **0** |
-| anchored corruption detection rate | **3.4%** (honest ceiling) |
+| papers / equations extracted / parsable | 142 / 10,551 / 5,051 |
+| symbol-grounding coverage | 97.5% |
+| decidable by SMT | 706 equations |
+| **false rejects on real equations (FPR_smt)** | **7 / 706 = 0.99%** |
+| corruption detection (prose-anchored scope) | 3.1% |
 
-**Per-audience benchmark:**
+Every one of the 7 false rejects was traced to an input artifact — a
+LaTeX macro or subscript the parser misread (`R_{\rm ch}`), or a
+wrongly-grounded symbol (entropy `S` pinned to `M L⁻³`) — never to the
+solver rejecting correct physics. The honest ceiling for *detection* is
+low (~3%) because only ~10% of real equations carry a prose-stated
+dimension anchor; widening that is a grounding problem, not a solver
+problem. Full per-equation analysis: `data/real/bench_fulltext_server2.json`.
 
-| audience | papers | equations | FPR | anchored |
-|---|---|---|---|---|
-| National Labs (CERN/NASA) | 86 | 3,467 | 0.0% | 37 |
-| Oil & Gas / Aerospace | 30 | 1,161 | 0.0% | 37 |
-| Pharmaceutical R&D | 34 | 529 | 0.0% | 8 |
-| Civil Engineering | 7 | 466 | 0.0% | 23 |
-| Academic Journals | 11 | 296 | 0.0% | 7 |
-| R&D Semiconductor | 16 | 244 | 0.0% | 6 |
-| Medical Physics | 5 | 98 | 0.0% | 1 |
-| STEM Education | 11 | 85 | 0.0% | 0 |
+### 4. Standard external datasets — does no harm
 
-Read honestly: on 200 real papers the veto **never** rejects a true equation
-(FPR 0.0%, down from 6.8% before the symbol-table tightening), and it catches
-every corruption it can decide (100% detection rate on the anchored scope).
-About ~10% of real equations carry a prose-stated dimension anchor, so the
-veto abstains on the rest — SMT only counts an `unsat` as a reject when the
-proof rests on a symbol whose meaning the prose fixed (`c` = speed of light,
-`R` = Ricci scalar, `G` = gravitational constant, `L_p` = Planck length, …).
-Widening coverage is a grounding problem (more prose anchors, a gold-set of
-anchored equations, document-wide definition propagation), not an algorithmic
-one — the proof engine itself is honest and complete.
+| dataset | cases | result |
+|---|---|---|
+| MMLU | 1,350 | **100% pass-through** (no false rejects) |
+| MMLU-Pro | 200 | **100% pass-through** |
+| GPQA (diamond) | 200 | **100% pass-through** |
+| TruthfulQA | 200 | **100% pass-through** |
+| HaluEval (hallucinated text) | 200 | 0% detection — out of domain |
+
+The gate is a physics instrument: on general text it stays silent, on
+text-hallucination (no formula) it has no signal — by design.
+
+### 5. Live HTTP API
+
+`python -m formulagate.api` (FastAPI, `/verify`, `/check`, `/health`):
+
+| measurement | value |
+|---|---|
+| determinism (60 repeated requests) | 100% byte-identical |
+| latency p50 — `/verify` | 4.1 ms |
+| latency p50 — `/check` | 6.0 ms |
+| sustained throughput (8 workers) | 619 req/s |
+
+### Reproduce everything
+
+```bash
+pip install -e ".[dev]" && pytest -q                 # 443 tests
+python scripts/fetch_arxiv_benchmark.py --per-category 60
+python scripts/bench_real.py --out data/calibration.json --multi-out data/calibration_fused.json
+python scripts/fetch_benchmarks.py --all             # MMLU, GPQA, TruthfulQA, HaluEval…
+python scripts/bench_suite.py --all
+python scripts/bench_fulltext.py                     # needs scripts/fetch_arxiv_sources.py first
+```
+
+Fresh-run reports from the reference machine live in
+`data/real/bench_*_server*.json` — committed so claims are checkable.
+
+## Honest limitations
+
+- **Narrow domain.** The veto only decides physics equations; general
+  factual hallucination (HaluEval) is invisible to it.
+- **Low detection recall.** ~3% of corruptions are caught (only the
+  prose-anchored scope is decidable). It is a high-precision instrument,
+  not a broad detector.
+- **Grounding fragility.** ~1% of real equations are falsely rejected
+  when LaTeX macros/subscripts parse wrong or a symbol grounds to the
+  wrong quantity. All observed cases are input artifacts.
+- **Version pin.** sympy's LaTeX parser requires antlr4 4.11.x exactly.
+
+## Architecture
+
+| layer | modules | failure mode |
+|---|---|---|
+| extraction | `formula_extract`, `tex_ingest` | unparsable → `parse_error`, never a crash |
+| dimensions | `dimensions`, `verify_smt` (Z3), `symbol_grounding` | ambiguous symbol → `unknown`, never a guess |
+| equivalence | `equivalence` (hash → symbolic → numeric) | inconclusive → `unknown` |
+| signals | `physics_signals`, `physics_constraints`, `grounding` | any failure → neutral feature |
+| decision | `gate`, `calibration`, `conformal`, `sdk` | calibrated abstention |
+
+Integrations: `langchain` (Guardrail / Callback / Router / Retriever),
+`middleware` (rate limiting, caching, Prometheus metrics), `api`
+(FastAPI), `billing` (API keys and tiers), `cli`.
+
+## License
+
+MIT.
