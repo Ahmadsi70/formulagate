@@ -7,7 +7,7 @@ proves it wrong — not by scoring, but by SMT proof over the linear system
 of dimension exponents. When it cannot prove either way, it **abstains**
 rather than guess.
 
-- **444 tests, all passing** — deterministic layer runs on the standard library alone
+- **445 tests** (CI: 444 passed + 1 skipped — the dense-model test needs the optional embedding dependency) — deterministic layer runs on the standard library alone
 - **Zero false rejects** on 1,950 general-knowledge cases (MMLU, MMLU-Pro, GPQA, TruthfulQA)
 - **90.8% generate precision, ECE 0.025** on 902 real arXiv cases (5-fold, out-of-fold)
 - **Deterministic**: identical inputs → byte-identical outputs, no neural model loaded by default
@@ -152,7 +152,7 @@ text-hallucination (no formula) it has no signal — by design.
 ### Reproduce everything
 
 ```bash
-pip install -e ".[dev]" && pytest -q                 # 444 tests
+pip install -e ".[dev]" && pytest -q                 # 445 tests
 python scripts/fetch_arxiv_benchmark.py --per-category 60
 python scripts/bench_real.py --out data/calibration.json --multi-out data/calibration_fused.json
 python scripts/fetch_benchmarks.py --all             # MMLU, GPQA, TruthfulQA, HaluEval…

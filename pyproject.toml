@@ -51,7 +51,7 @@ rag = ["rank-bm25>=0.2.2"]
 # Symbolic layer: dimensional analysis, canonicalisation, equivalence proofs.
 # Optional on purpose — without it every physics signal degrades to "unknown"
 # and the gate falls back to similarity instead of failing.
-physics = ["sympy>=1.12", "antlr4-python3-runtime==4.11.*"]
+physics = ["sympy>=1.12", "antlr4-python3-runtime==4.11.*", "z3-solver>=4.12"]
 dense = [
   "rank-bm25>=0.2.2",
   "numpy>=1.26",
