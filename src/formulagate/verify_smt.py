@@ -120,7 +120,8 @@ def check_dimensions_smt(
     """Prove/refute dimensional consistency of ``formula`` with Z3.
 
     Args:
-        formula: a :class:`formulagate.formula_extract.Formula` (canonicalised).
+        formula: a :class:`formulagate.formula_extract.Formula` (canonicalised)
+            or a raw LaTeX string, which is canonicalised first.
         overrides: symbol → dimension, from grounding or a caller's table.
         unknown_symbols: symbols allowed to float (unknown dimensions). When a
             model assigns them values consistently, the equation is consistent
@@ -145,8 +146,15 @@ def check_dimensions_smt(
     """
     import z3
 
+    if isinstance(formula, str):
+        from formulagate.formula_extract import canonicalize
+
+        formula = canonicalize(formula)
     if not getattr(formula, "canonical", None):
-        return SmtVerdict("unknown", detail=formula.parse_error or "no canonical form")
+        return SmtVerdict(
+            "unknown",
+            detail=getattr(formula, "parse_error", None) or "no canonical form",
+        )
 
     expr = _sympy_expr(formula)
     if not getattr(expr, "free_symbols", None):
@@ -154,8 +162,6 @@ def check_dimensions_smt(
 
     import sympy
 
-    # Base dimension exponent variables.
-    var = {name: z3.Real(f"{name}") for name in _BASE_NAMES}
     # symbol → dict of exponent vars (shared across uses). LaTeX symbol names
     # often contain characters Z3's parser rejects ({, }, \, Greek letters), so
     # each symbol is aliased to a safe internal identifier.
@@ -481,7 +487,6 @@ def infer_symbol_dimensions(
     if not getattr(expr, "free_symbols", None):
         return {}
 
-    var = {name: z3.Real(name) for name in _BASE_NAMES}
     sym_vars: dict[str, dict[str, z3.ArithRef]] = {}
     _used = set()
 

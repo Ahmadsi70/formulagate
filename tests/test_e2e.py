@@ -308,3 +308,13 @@ def test_e2e_calibrated_threshold_applied(tmp_path: Path) -> None:
     result = gate.check(brief=brief, draft=draft)
 
     assert result.threshold is not None
+
+
+def test_lexical_domain_fallback_classifies_fundamental_constants() -> None:
+    # The lexical (no-embedding) fallback used to score zero physics markers
+    # for "speed of light in vacuum" — a canonical physics brief — so CI runs
+    # without sentence-transformers classified it as "general".
+    from formulagate.domain import classify_domain
+
+    assert classify_domain("What is the speed of light in vacuum?", use_ml=False) == "physics"
+    assert classify_domain("What is the capital of France?", use_ml=False) == "general"

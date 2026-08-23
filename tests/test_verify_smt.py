@@ -129,3 +129,18 @@ def test_certain_constants_reach_braced_free_symbols() -> None:
     anchored, anchors = is_dimension_anchored(f, overrides={}, certain_symbols=[])
     assert anchored
     assert any("epsilon_0" in s.replace("{", "").replace("}", "") for s in anchors)
+
+
+def test_raw_string_input_does_not_crash() -> None:
+    # check_dimensions_smt used to assume a Formula object and raise
+    # AttributeError on formula.parse_error when handed a raw LaTeX string.
+    # A plain string must be canonicalised instead; garbage degrades to
+    # "unknown" like every other unparseable input.
+    v = check_dimensions_smt(r"E = m c^2")
+    assert v.status == "consistent"
+
+    v3 = check_dimensions_smt(r"E = m c^3")
+    assert v3.status in ("inconsistent", "unknown")
+
+    vjunk = check_dimensions_smt("not a formula !!!")
+    assert vjunk.status == "unknown"

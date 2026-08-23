@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "formulagate"
-version = "1.0.0"
-description = "Physics-aware LLM guardrail — deterministic dimensional analysis with Z3 SMT proof, 0% false-reject rate on 200+ real papers"
+version = "1.0.1"
+description = "Physics-aware LLM guardrail — deterministic dimensional analysis with Z3 SMT proof and calibrated abstention"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -42,13 +42,16 @@ dev = [
   "numpy>=1.26",
   "faiss-cpu>=1.8",
   "sympy>=1.12",
-  "antlr4-python3-runtime>=4.11",
+  # sympy's LaTeX parser is compiled against one antlr4 runtime major;
+  # 4.13 silently fails to parse and every formula degrades to "unknown".
+  "antlr4-python3-runtime==4.11.*",
+  "z3-solver>=4.12",
 ]
 rag = ["rank-bm25>=0.2.2"]
 # Symbolic layer: dimensional analysis, canonicalisation, equivalence proofs.
 # Optional on purpose — without it every physics signal degrades to "unknown"
 # and the gate falls back to similarity instead of failing.
-physics = ["sympy>=1.12", "antlr4-python3-runtime>=4.11"]
+physics = ["sympy>=1.12", "antlr4-python3-runtime==4.11.*", "z3-solver>=4.12"]
 dense = [
   "rank-bm25>=0.2.2",
   "numpy>=1.26",
@@ -72,7 +75,10 @@ formulagate = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+# "." keeps the repo root importable so tests can import the scripts package
+# even when pytest is invoked as a console entry point (CI), which does not
+# put the working directory on sys.path.
+pythonpath = ["src", "."]
 markers = [
   "dense_model: tests that download sentence-transformers models",
 ]

@@ -465,7 +465,7 @@ def main() -> int:
 
     report = {
         "metadata": {
-            "model": "Formulagate v1.0.0 + Pharma Extension",
+            "model": "Formulagate v1.0.1 + Pharma Extension",
             "no_llm_key_required": True,
             "method": "deterministic dimensional analysis + Z3 SMT",
             "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),

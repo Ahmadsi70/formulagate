@@ -59,13 +59,6 @@ if decision.action == "abstain":
 
 ## Benchmark results
 
-On 902 real arXiv cases (out-of-fold, stratified 5-fold):
-
-| Model | AUC | Abstain recall | Generate precision | ECE |
-|---|---|---|---|---|
-| Similarity only | 0.711 | 80.3% | 0.725 | 0.082 |
-| + Physics features | 0.731 | 91.6% | 0.847 | 0.073 |
-| **+ Grounding + Constraints** | **0.791** | **95.9%** | **0.993** | **0.029** |
-
-The v0.7 fused model trades 4 points of accuracy for near-perfect precision
-(99.3%) and abstain recall (95.9%).
+Freshly reproduced, cache-free benchmark numbers live in the README —
+[Benchmarks — real data, reproducible](https://github.com/Ahmadsi70/formulagate#benchmarks--real-data-reproducible).
+Raw per-run reports are committed under `data/real/bench_*_server*.json`.

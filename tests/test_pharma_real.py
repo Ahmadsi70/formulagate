@@ -363,7 +363,7 @@ def main() -> dict:
     )
 
     results = {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "test_type": "pharmaceutical_real_world",
         "total": len(PHARMA_FORMULAS),
         "passed": 0,
