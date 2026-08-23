@@ -659,6 +659,21 @@ UNDERGRAD_PHYSICS_MARKERS = (
     "damping",
     "resonance",
     "doppler",
+    # Fundamental-constant and modern-physics briefs ("What is the speed of
+    # light in vacuum?") used to score zero markers and fall to "general"
+    # when the embedding model is unavailable. Long, unambiguous tokens only:
+    # matching is substring-based, so short stems would false-positive.
+    "speed of light",
+    "vacuum",
+    "relativity",
+    "einstein",
+    "maxwell",
+    "planck",
+    "quantum",
+    "coulomb",
+    "ampere",
+    "kelvin",
+    "luminosity",
     "sound",
     "ultrasound",
     "pitch",
