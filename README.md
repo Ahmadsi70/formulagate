@@ -13,11 +13,9 @@ rather than guess.
 - **Deterministic**: identical inputs → byte-identical outputs, no neural model loaded by default
 
 ```bash
-pip install git+https://github.com/Ahmadsi70/formulagate.git     # core gate, zero dependencies
-pip install "formulagate[physics] @ git+https://github.com/Ahmadsi70/formulagate.git"
-# + SymPy, for canonicalisation and equivalence
-pip install "formulagate[dense] @ git+https://github.com/Ahmadsi70/formulagate.git"
-# + embeddings and reranking
+pip install formulagate            # core gate, zero dependencies
+pip install "formulagate[physics]" # + SymPy + Z3, for canonicalisation and equivalence
+pip install "formulagate[dense]"   # + embeddings and reranking
 ```
 
 > **Version note:** the `[physics]` extra pins `antlr4-python3-runtime==4.11.*`.

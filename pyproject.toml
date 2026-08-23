@@ -35,6 +35,10 @@ classifiers = [
 # alone; every heavier capability is an opt-in extra.
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/Ahmadsi70/formulagate"
+Source = "https://github.com/Ahmadsi70/formulagate"
+
 [project.optional-dependencies]
 dev = [
   "pytest>=7.0",
