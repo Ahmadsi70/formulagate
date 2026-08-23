@@ -75,7 +75,10 @@ formulagate = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+# "." keeps the repo root importable so tests can import the scripts package
+# even when pytest is invoked as a console entry point (CI), which does not
+# put the working directory on sys.path.
+pythonpath = ["src", "."]
 markers = [
   "dense_model: tests that download sentence-transformers models",
 ]
