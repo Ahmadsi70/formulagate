@@ -1,5 +1,37 @@
 # Changelog
 
+## Unreleased — 2026-08-29
+
+### Fully free, open API with auto-labeled data enrichment
+
+- **Removed** the entire `billing`/API-key/auth subsystem (`billing.py`) —
+  it was dead code never wired into the server. The API is now fully open:
+  no keys, no quotas, no auth.
+- **Added** optional PostgreSQL persistence (`formulagate.database`,
+  `formulagate[database]` extra): every `/verify` and `/check` is logged to
+  `verification_log` / `check_log`, and scientific source documents can be
+  stored/searched via `/db/sources` (GET/POST/DELETE) and `/db/stats`.
+- **Auto-labeling**: every record is automatically labelled `correct`,
+  `incorrect`, or `uncertain` by the **Z3 proof engine** (not a probabilistic
+  model). Stored in new columns `ground_truth` + `label_confidence`.
+- **Vector embeddings (pgvector)**: each formula is embedded via
+  `all-MiniLM-L6-v2` (384‑d, cosine‑normalised) and stored in `vector(384)`
+  columns for semantic search and clustering — enables
+  `POST /db/search/similar` for real‑time formula similarity queries.
+- **Export endpoints**: `GET /db/export/verified` (Z3‑labelled formula pairs)
+  and `GET /db/export/benchmark` (gate‑check triplets) for dataset
+  publishing / commercial use.
+- **Schema migration**: new columns (embedding, ground_truth) are added
+  automatically via `ALTER TABLE … ADD COLUMN IF NOT EXISTS` on first
+  connect — existing databases upgrade silently.
+- **Backwards compatible**: without `FORMULAGATE_DATABASE_URL` nothing is
+  stored; the old columns are read without error on existing records.
+  Without `sentence-transformers` installed, embeddings are gracefully
+  omitted (not a crash).
+- 453 tests pass (8 new: auto‑label unit tests, export 404s, API returns labels).
+  breaks a request.
+- 449 tests pass (4 new: database-disabled path + open-API + db 404s).
+
 ## v1.0.1 — 2026-08-22
 
 ### Release readiness (fresh-run validation on a clean 48-core host)

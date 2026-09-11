@@ -66,6 +66,15 @@ api = [
   "fastapi>=0.100",
   "uvicorn>=0.23",
 ]
+# PostgreSQL persistence for verification history and scientific sources
+# (optional — without it the API simply doesn't store anything).
+database = [
+  "psycopg2-binary>=2.9",
+]
+# Dodo Payments billing integration for the Freemium SaaS tier (optional).
+billing = [
+  "dodopayments>=1.0",
+]
 
 [project.scripts]
 formulagate = "formulagate.cli:main"

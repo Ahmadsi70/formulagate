@@ -10,7 +10,7 @@ Gate 5 of the MVP roadmap.  Provides:
       specified QPS (queries per second) or burst size.
 
   ``UsageMonitor`` — Tracks API usage, abstention rates, and latency metrics
-      for observability and billing.
+      for observability.
 
   ``CachedGate`` — Decorator that wraps any Formulagate gate instance with
       caching and rate limiting (default enabled).
@@ -235,8 +235,7 @@ class UsageMetrics:
 class UsageMonitor:
     """Monitor usage statistics for Formulagate API calls.
 
-    Tracks latency, action distribution, and can be used for billing or
-    anomaly detection.
+    Tracks latency, action distribution, and anomaly detection signals.
 
     Args:
         min_latency_ms: Minimum latency to record (default 1ms).

@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.version="0.7.0"
 
 # Install SymPy for the physics layer (dimensional analysis + equivalence).
 # Kept separate so the base image stays small when only the core gate is needed.
-RUN pip install --no-cache-dir sympy fastapi uvicorn
+RUN pip install --no-cache-dir sympy fastapi uvicorn psycopg2-binary
 
 WORKDIR /app
 COPY src/ /app/src/

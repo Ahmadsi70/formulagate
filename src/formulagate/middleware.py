@@ -141,6 +141,64 @@ class RateLimiter:
         }
 
 
+# ─── Tiered Rate Limiter ───────────────────────────────────────────────────────
+
+
+class TieredRateLimiter:
+    """Rate limiter that applies different limits based on a user's plan.
+
+    Uses the existing ``RateLimiter`` underneath, selecting the appropriate
+    config per plan.  Falls back to the free-tier limits for anonymous
+    (unauthenticated) users.
+
+    Args:
+        redis_url: Optional Redis URL for distributed rate limiting.
+    """
+
+    def __init__(self, redis_url: str | None = None) -> None:
+        from formulagate.plans import PLANS
+
+        self._redis_url = redis_url
+        self._limiters: dict[str, RateLimiter] = {}
+        for key, plan in PLANS.items():
+            self._limiters[key] = RateLimiter(
+                config=RateLimitConfig(
+                    requests_per_minute=plan.rate_limit_per_minute,
+                    requests_per_hour=10_000,  # generous hourly ceiling
+                    burst_size=plan.rate_limit_per_minute,
+                ),
+                redis_url=redis_url,
+            )
+        # Also register a fallback for anonymous.
+        free = PLANS["free"]
+        self._limiters["__anonymous__"] = RateLimiter(
+            config=RateLimitConfig(
+                requests_per_minute=free.rate_limit_per_minute,
+                requests_per_hour=10_000,
+                burst_size=free.rate_limit_per_minute,
+            ),
+            redis_url=redis_url,
+        )
+
+    def is_allowed(
+        self, client_id: str, plan: str = "free", user_id: int | None = None
+    ) -> tuple[bool, dict[str, int]]:
+        """Check if a request should be allowed for a given plan.
+
+        Args:
+            client_id: IP address or API-key prefix (used as the window key).
+            plan: The user's plan key (``"free"``, ``"pro"``, etc.).
+            user_id: Optional user id for authenticated users.
+
+        Returns:
+            ``(allowed, limits)`` tuple.
+        """
+        if user_id is not None:
+            client_id = f"user:{user_id}"
+        limiter = self._limiters.get(plan, self._limiters["free"])
+        return limiter.is_allowed(client_id)
+
+
 # ─── Formula Cache ───────────────────────────────────────────────────────────
 
 
@@ -409,6 +467,7 @@ def setup_middleware(
     *,
     redis_url: str | None = None,
     rate_limit: RateLimitConfig | None = None,
+    tiered: bool = False,
     cache_max_size: int = 10000,
     cache_ttl: int = 3600,
 ) -> dict[str, Any]:
@@ -417,7 +476,9 @@ def setup_middleware(
     Args:
         app: FastAPI application instance.
         redis_url: Optional Redis URL for distributed rate limiting and caching.
-        rate_limit: Rate limit configuration.
+        rate_limit: Rate limit configuration (ignored when ``tiered=True``).
+        tiered: When True, use ``TieredRateLimiter`` with per-plan limits
+            instead of a single ``RateLimiter`` for all clients.
         cache_max_size: Max cache entries.
         cache_ttl: Default cache TTL in seconds.
 
@@ -428,7 +489,10 @@ def setup_middleware(
     from fastapi.responses import JSONResponse
 
     # Create components
-    rate_limiter = RateLimiter(config=rate_limit, redis_url=redis_url)
+    if tiered:
+        rate_limiter = TieredRateLimiter(redis_url=redis_url)
+    else:
+        rate_limiter = RateLimiter(config=rate_limit, redis_url=redis_url)
     cache = FormulaCache(max_size=cache_max_size, default_ttl=cache_ttl, redis_url=redis_url)
     metrics = PrometheusMetrics()
     struct_logger = StructuredLogger("formulagate")
@@ -439,8 +503,23 @@ def setup_middleware(
         client_id = request.client.host if request.client else "unknown"
         start_time = time.monotonic()
 
-        # Rate limiting
-        allowed, limits = rate_limiter.is_allowed(client_id)
+        # Rate limiting — tiered or flat.
+        if isinstance(rate_limiter, TieredRateLimiter):
+            # Extract plan from the request context (set by auth dependency).
+            # If no user context is available, default to free.
+            plan = "free"
+            user_id = None
+            try:
+                user_ctx = getattr(request.state, "user", None)
+                if user_ctx is not None:
+                    plan = getattr(user_ctx, "plan", "free")
+                    user_id = getattr(user_ctx, "user_id", None)
+            except Exception:
+                pass
+            allowed, limits = rate_limiter.is_allowed(client_id, plan=plan, user_id=user_id)
+        else:
+            allowed, limits = rate_limiter.is_allowed(client_id)
+
         if not allowed:
             duration_ms = (time.monotonic() - start_time) * 1000
             metrics.increment("rate_limited_total")

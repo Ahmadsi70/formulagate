@@ -26,7 +26,7 @@ COPY pyproject.toml /workspace/formulagate/
 
 # ─── Install Formulagate + all extras ─────────────────────────────────────
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    pip install --no-cache-dir -e ".[dev,physics,dense,rag,api]" && \
+    pip install --no-cache-dir -e ".[dev,physics,dense,rag,api,database]" && \
     pip install --no-cache-dir datasets huggingface_hub requests
 
 # ─── Pre-download MiniLM model (cached in image) ──────────────────────────

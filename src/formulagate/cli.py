@@ -332,6 +332,169 @@ def _cmd_bench(args: argparse.Namespace) -> int:
     return 0
 
 
+# ─── Admin commands ────────────────────────────────────────────────────────────
+
+
+def _admin_key_create(args: argparse.Namespace) -> int:
+    """Create an API key for a new or existing user."""
+    from formulagate.auth import generate_api_key, hash_api_key
+    from formulagate.database import get_database
+
+    db = get_database()
+    if not db.enabled:
+        print("Error: PostgreSQL not configured (set FORMULAGATE_DATABASE_URL)", file=sys.stderr)
+        return 1
+
+    api_key = generate_api_key()
+    hashed = hash_api_key(api_key)
+    prefix = api_key[:15]
+
+    user = db.create_user(
+        email=args.email,
+        api_key_hash=hashed,
+        api_key_prefix=prefix,
+        plan=args.plan,
+    )
+    if user is None:
+        print(f"Error: user with email {args.email} already exists", file=sys.stderr)
+        return 1
+
+    print(json.dumps({
+        "api_key": api_key,
+        "api_key_prefix": prefix,
+        "user_id": user["id"],
+        "email": user["email"],
+        "plan": user["plan"],
+    }, indent=2))
+    return 0
+
+
+def _admin_key_revoke(args: argparse.Namespace) -> int:
+    """Revoke (delete) a user by email or user id."""
+    from formulagate.database import get_database
+
+    db = get_database()
+    if not db.enabled:
+        print("Error: PostgreSQL not configured (set FORMULAGATE_DATABASE_URL)", file=sys.stderr)
+        return 1
+
+    if args.user_id:
+        user = db.get_user_by_id(args.user_id)
+    else:
+        user = db.get_user_by_email(args.email)
+
+    if user is None:
+        print("Error: user not found", file=sys.stderr)
+        return 1
+
+    ok = db.revoke_user(user["id"])
+    if not ok:
+        print("Error: failed to revoke user", file=sys.stderr)
+        return 1
+
+    print(json.dumps({"revoked": user["id"], "email": user["email"]}, indent=2))
+    return 0
+
+
+def _admin_key_list(args: argparse.Namespace) -> int:
+    """List registered users."""
+    from formulagate.database import get_database
+
+    db = get_database()
+    if not db.enabled:
+        print("Error: PostgreSQL not configured (set FORMULAGATE_DATABASE_URL)", file=sys.stderr)
+        return 1
+
+    users = db.list_users(limit=args.limit, offset=args.offset)
+    print(json.dumps({"users": users, "count": len(users)}, indent=2))
+    return 0
+
+
+def _admin_plan_set(args: argparse.Namespace) -> int:
+    """Set a user's plan."""
+    from formulagate.database import get_database
+    from formulagate.plans import PLANS
+
+    if args.plan not in PLANS:
+        print(f"Error: unknown plan {args.plan!r}", file=sys.stderr)
+        return 1
+
+    db = get_database()
+    if not db.enabled:
+        print("Error: PostgreSQL not configured (set FORMULAGATE_DATABASE_URL)", file=sys.stderr)
+        return 1
+
+    if args.user_id:
+        user = db.get_user_by_id(args.user_id)
+    else:
+        user = db.get_user_by_email(args.email)
+
+    if user is None:
+        print("Error: user not found", file=sys.stderr)
+        return 1
+
+    ok = db.update_user_plan(user["id"], args.plan)
+    if not ok:
+        print("Error: failed to update plan", file=sys.stderr)
+        return 1
+
+    print(json.dumps({"user_id": user["id"], "email": user["email"], "plan": args.plan}, indent=2))
+    return 0
+
+
+def _admin_plan_info(args: argparse.Namespace) -> int:
+    """Show a user's plan and usage."""
+    from formulagate.database import get_database
+    from formulagate.plans import PLANS
+
+    db = get_database()
+    if not db.enabled:
+        print("Error: PostgreSQL not configured (set FORMULAGATE_DATABASE_URL)", file=sys.stderr)
+        return 1
+
+    if args.user_id:
+        user = db.get_user_by_id(args.user_id)
+    else:
+        user = db.get_user_by_email(args.email)
+
+    if user is None:
+        print("Error: user not found", file=sys.stderr)
+        return 1
+
+    usage = db.get_monthly_usage(user["id"])
+    plan = PLANS.get(user["plan"], PLANS["free"])
+    ok, used, limit = db.check_quota(user["id"], user["plan"])
+
+    print(json.dumps({
+        "user_id": user["id"],
+        "email": user["email"],
+        "plan": user["plan"],
+        "plan_name": plan.name,
+        "monthly_quota": plan.monthly_quota,
+        "usage_this_month": usage,
+        "total_used": used,
+        "remaining": limit - used if limit > 0 else "unlimited",
+        "subscription": db.get_active_subscription(user["id"]),
+        "created_at": user["created_at"],
+    }, indent=2, default=str))
+    return 0
+
+
+def _admin_stats(args: argparse.Namespace) -> int:
+    """Show aggregate usage statistics."""
+    from formulagate.database import get_database
+
+    db = get_database()
+    if not db.enabled:
+        print("Error: PostgreSQL not configured (set FORMULAGATE_DATABASE_URL)", file=sys.stderr)
+        return 1
+
+    stats = db.get_usage_stats()
+    stats["db_metrics"] = db.get_stats()
+    print(json.dumps(stats, indent=2))
+    return 0
+
+
 def _add_gate_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--brief", required=True)
     p.add_argument("--draft", required=True)
@@ -463,6 +626,51 @@ def main(argv: list[str] | None = None) -> int:
     bench_p.add_argument("--embedder", choices=("hash", "minilm"), default="hash")
     bench_p.add_argument("--top-k", type=int, default=3)
     bench_p.set_defaults(func=_cmd_bench)
+
+    # ── Admin subcommands ─────────────────────────────────────────────────
+    admin_p = sub.add_parser("admin", help="Administrative commands (users, plans, stats)")
+    admin_sub = admin_p.add_subparsers(dest="admin_command", required=True)
+
+    # admin key
+    key_p = admin_sub.add_parser("key", help="Manage API keys")
+    key_sub = key_p.add_subparsers(dest="key_command", required=True)
+
+    key_create = key_sub.add_parser("create", help="Create a new API key")
+    key_create.add_argument("--email", required=True, help="User email address")
+    key_create.add_argument("--plan", default="free", help="Plan to assign (default: free)")
+    key_create.set_defaults(func=_admin_key_create)
+
+    key_revoke = key_sub.add_parser("revoke", help="Revoke (delete) a user's API key")
+    key_revoke_group = key_revoke.add_mutually_exclusive_group(required=True)
+    key_revoke_group.add_argument("--user-id", type=int, help="User ID")
+    key_revoke_group.add_argument("--email", help="User email")
+    key_revoke.set_defaults(func=_admin_key_revoke)
+
+    key_list = key_sub.add_parser("list", help="List registered users")
+    key_list.add_argument("--limit", type=int, default=50)
+    key_list.add_argument("--offset", type=int, default=0)
+    key_list.set_defaults(func=_admin_key_list)
+
+    # admin plan
+    plan_p = admin_sub.add_parser("plan", help="Manage user plans")
+    plan_sub = plan_p.add_subparsers(dest="plan_command", required=True)
+
+    plan_set = plan_sub.add_parser("set", help="Set a user's plan")
+    plan_set_user = plan_set.add_mutually_exclusive_group(required=True)
+    plan_set_user.add_argument("--user-id", type=int, help="User ID")
+    plan_set_user.add_argument("--email", help="User email")
+    plan_set.add_argument("--plan", required=True, help="Plan key (free/pro/team/enterprise)")
+    plan_set.set_defaults(func=_admin_plan_set)
+
+    plan_info = plan_sub.add_parser("info", help="Show a user's plan and usage")
+    plan_info_user = plan_info.add_mutually_exclusive_group(required=True)
+    plan_info_user.add_argument("--user-id", type=int, help="User ID")
+    plan_info_user.add_argument("--email", help="User email")
+    plan_info.set_defaults(func=_admin_plan_info)
+
+    # admin stats
+    stats_p = admin_sub.add_parser("stats", help="Show aggregate usage statistics")
+    stats_p.set_defaults(func=_admin_stats)
 
     args = parser.parse_args(argv)
     return int(args.func(args))
